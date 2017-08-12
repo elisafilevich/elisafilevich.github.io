@@ -151,7 +151,9 @@ a:after {
 #footer {
 	background-color: #2f2f2f;
 	padding-top: 50px;
-	padding-bottom: 50px; 
+	padding-bottom: 50px;
+	position: absolute;
+	width: 100%;
 }
 
 #footer p {
