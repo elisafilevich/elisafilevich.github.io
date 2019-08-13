@@ -343,6 +343,7 @@ img {
 .img-responsive {
   display: block;
   height: auto;
+  margin: auto;
   max-width: 100%;
 }
 

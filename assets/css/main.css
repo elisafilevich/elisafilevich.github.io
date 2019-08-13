@@ -20,6 +20,12 @@ body {
     -webkit-overflow-scrolling: touch;
 }
 
+.pt {
+	position: relative;
+	min-height: 75vh;
+  }
+
+
 /* Titles */
 h1, h2, h3, h4, h5, h6 {
 	font-family: 'Montserrat', sans-serif;
