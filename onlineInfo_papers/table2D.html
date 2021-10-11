@@ -1,0 +1,853 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="jquery.sortable.js"></script>
+<style>
+
+table.sortable th.sorted { 
+	color: #98FFAB;
+}
+
+th.sort-number { cursor: pointer; }
+
+table.sortable th.sorted-ascending::after  { content:' ▲'  }
+table.sortable th.sorted-descending::after { content:' ▼'  }
+
+.dataframe {
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 0.9em;
+    font-family: sans-serif;
+    min-width: 400px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+	border-radius: 0.8em;
+	overflow: hidden;
+}
+
+.dataframe thead tr {
+    background-color: #009879;
+    color: #ffffff;
+    text-align: center;
+}
+
+.dataframe th,
+.dataframe td {
+	white-space: nowrap;
+    padding: 12px 15px;
+	//border-left: thin solid #dddddd;
+	//border-right: thin solid #dddddd;
+}
+
+.dataframe tbody tr {
+    border-bottom: thin solid #dddddd;
+}
+
+.dataframe tbody tr:nth-of-type(even) {
+    background-color: #f3f3f3;
+}
+
+.dataframe tbody tr:last-of-type {
+    border-bottom: 2px solid #009879;
+}
+
+.dataframe tbody tr.active-row {
+    font-weight: bold;
+    color: #009879;
+}
+
+.face-img {
+	width: 200px;
+	height: 200px;
+}
+</style>
+</head>
+<body>
+<table class="dataframe sortable">
+  <thead>
+    <tr>
+      <th class="sort-number">Subject</th>
+      <th>Up</th>
+      <th>Down</th>
+      <th>Left</th>
+      <th>Right</th>
+      <th class="sort-number">RSSQ Slope</th>
+      <th class="sort-number">RSSQ Intercept</th>
+      <th class="sort-number">RSSQ R Value</th>
+      <th class="sort-number">RSSQ P Value</th>
+      <th class="sort-number">Model Slope</th>
+      <th class="sort-number">Model Intercept</th>
+      <th class="sort-number">Model R Value</th>
+      <th class="sort-number">Model P Value</th>
+      <th class="sort-number">Similarity Slope</th>
+      <th class="sort-number">Similarity Intercept</th>
+      <th class="sort-number">Similarity R Value</th>
+      <th class="sort-number">Similarity P Value</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td><img class="face-img" src="images/2D/sub01y_pos.png"></td>
+      <td><img class="face-img" src="images/2D/sub01y_neg.png"></td>
+      <td><img class="face-img" src="images/2D/sub01x_pos.png"></td>
+      <td><img class="face-img" src="images/2D/sub01x_neg.png"></td>
+      <td>-111.585199</td>
+      <td>360.561259</td>
+      <td>-0.227347</td>
+      <td>0.000245</td>
+      <td>0.166841</td>
+      <td>0.439562</td>
+      <td>0.242749</td>
+      <td>8.715226e-05</td>
+      <td>0.099639</td>
+      <td>0.425415</td>
+      <td>0.089625</td>
+      <td>1.527589e-01</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td><img class="face-img" src="images/2D/sub02y_pos.png"></td>
+      <td><img class="face-img" src="images/2D/sub02y_neg.png"></td>
+      <td><img class="face-img" src="images/2D/sub02x_pos.png"></td>
+      <td><img class="face-img" src="images/2D/sub02x_neg.png"></td>
+      <td>-2.367911</td>
+      <td>402.257417</td>
+      <td>-0.003635</td>
+      <td>0.954673</td>
+      <td>0.126792</td>
+      <td>0.676533</td>
+      <td>0.186236</td>
+      <td>3.305170e-03</td>
+      <td>0.029428</td>
+      <td>0.784173</td>
+      <td>0.035873</td>
+      <td>5.747233e-01</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td><img class="face-img" src="images/2D/sub03y_pos.png"></td>
+      <td><img class="face-img" src="images/2D/sub03y_neg.png"></td>
+      <td><img class="face-img" src="images/2D/sub03x_pos.png"></td>
+      <td><img class="face-img" src="images/2D/sub03x_neg.png"></td>
+      <td>-21.755044</td>
+      <td>429.098239</td>
+      <td>-0.019089</td>
+      <td>0.761155</td>
+      <td>0.040791</td>
+      <td>0.682599</td>
+      <td>0.064522</td>
+      <td>3.037778e-01</td>
+      <td>0.206271</td>
+      <td>0.463771</td>
+      <td>0.164332</td>
+      <td>8.429021e-03</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td><img class="face-img" src="images/2D/sub04y_pos.png"></td>
+      <td><img class="face-img" src="images/2D/sub04y_neg.png"></td>
+      <td><img class="face-img" src="images/2D/sub04x_pos.png"></td>
+      <td><img class="face-img" src="images/2D/sub04x_neg.png"></td>
+      <td>-13.481678</td>
+      <td>324.720773</td>
+      <td>-0.018876</td>
+      <td>0.764648</td>
+      <td>0.114358</td>
+      <td>0.663894</td>
+      <td>0.165207</td>
+      <td>8.336417e-03</td>
+      <td>0.038151</td>
+      <td>0.700364</td>
+      <td>0.027113</td>
+      <td>6.671581e-01</td>
+    </tr>
+    <tr>
+      <td>5</td>
+      <td><img class="face-img" src="images/2D/sub05y_pos.png"></td>
+      <td><img class="face-img" src="images/2D/sub05y_neg.png"></td>
+      <td><img class="face-img" src="images/2D/sub05x_pos.png"></td>
+      <td><img class="face-img" src="images/2D/sub05x_neg.png"></td>
+      <td>28.527398</td>
+      <td>249.365603</td>
+      <td>0.070850</td>
+      <td>0.259639</td>
+      <td>0.233361</td>
+      <td>0.415691</td>
+      <td>0.327133</td>
+      <td>8.989730e-08</td>
+      <td>0.196942</td>
+      <td>0.469640</td>
+      <td>0.182240</td>
+      <td>3.496496e-03</td>
+    </tr>
+    <tr>
+      <td>6</td>
+      <td><img class="face-img" src="images/2D/sub06y_pos.png"></td>
+      <td><img class="face-img" src="images/2D/sub06y_neg.png"></td>
+      <td><img class="face-img" src="images/2D/sub06x_pos.png"></td>
+      <td><img class="face-img" src="images/2D/sub06x_neg.png"></td>
+      <td>-181.524834</td>
+      <td>655.068481</td>
+      <td>-0.170246</td>
+      <td>0.006427</td>
+      <td>0.430162</td>
+      <td>0.357801</td>
+      <td>0.521854</td>
+      <td>3.255092e-19</td>
+      <td>0.076041</td>
+      <td>0.550236</td>
+      <td>0.091327</td>
+      <td>1.458761e-01</td>
+    </tr>
+    <tr>
+      <td>7</td>
+      <td><img class="face-img" src="images/2D/sub07y_pos.png"></td>
+      <td><img class="face-img" src="images/2D/sub07y_neg.png"></td>
+      <td><img class="face-img" src="images/2D/sub07x_pos.png"></td>
+      <td><img class="face-img" src="images/2D/sub07x_neg.png"></td>
+      <td>-54.377272</td>
+      <td>310.884803</td>
+      <td>-0.096348</td>
+      <td>0.124145</td>
+      <td>0.386683</td>
+      <td>0.300871</td>
+      <td>0.490499</td>
+      <td>6.665289e-17</td>
+      <td>0.328447</td>
+      <td>0.384520</td>
+      <td>0.353254</td>
+      <td>6.140492e-09</td>
+    </tr>
+    <tr>
+      <td>8</td>
+      <td><img class="face-img" src="images/2D/sub08y_pos.png"></td>
+      <td><img class="face-img" src="images/2D/sub08y_neg.png"></td>
+      <td><img class="face-img" src="images/2D/sub08x_pos.png"></td>
+      <td><img class="face-img" src="images/2D/sub08x_neg.png"></td>
+      <td>90.115187</td>
+      <td>334.521826</td>
+      <td>0.098423</td>
+      <td>0.116210</td>
+      <td>0.138850</td>
+      <td>0.517838</td>
+      <td>0.195056</td>
+      <td>1.713851e-03</td>
+      <td>0.288859</td>
+      <td>0.460988</td>
+      <td>0.187159</td>
+      <td>2.642728e-03</td>
+    </tr>
+    <tr>
+      <td>9</td>
+      <td><img class="face-img" src="images/2D/sub09y_pos.png"></td>
+      <td><img class="face-img" src="images/2D/sub09y_neg.png"></td>
+      <td><img class="face-img" src="images/2D/sub09x_pos.png"></td>
+      <td><img class="face-img" src="images/2D/sub09x_neg.png"></td>
+      <td>-47.166806</td>
+      <td>369.304865</td>
+      <td>-0.052799</td>
+      <td>0.401145</td>
+      <td>0.233844</td>
+      <td>0.592072</td>
+      <td>0.323873</td>
+      <td>1.225296e-07</td>
+      <td>-0.074940</td>
+      <td>0.867715</td>
+      <td>-0.061389</td>
+      <td>3.288644e-01</td>
+    </tr>
+    <tr>
+      <td>10</td>
+      <td><img class="face-img" src="images/2D/sub10y_pos.png"></td>
+      <td><img class="face-img" src="images/2D/sub10y_neg.png"></td>
+      <td><img class="face-img" src="images/2D/sub10x_pos.png"></td>
+      <td><img class="face-img" src="images/2D/sub10x_neg.png"></td>
+      <td>-48.480542</td>
+      <td>292.156635</td>
+      <td>-0.070743</td>
+      <td>0.259419</td>
+      <td>0.306268</td>
+      <td>0.533043</td>
+      <td>0.408039</td>
+      <td>1.085322e-11</td>
+      <td>0.165558</td>
+      <td>0.616963</td>
+      <td>0.109820</td>
+      <td>7.945914e-02</td>
+    </tr>
+    <tr>
+      <td>11</td>
+      <td><img class="face-img" src="images/2D/sub11y_pos.png"></td>
+      <td><img class="face-img" src="images/2D/sub11y_neg.png"></td>
+      <td><img class="face-img" src="images/2D/sub11x_pos.png"></td>
+      <td><img class="face-img" src="images/2D/sub11x_neg.png"></td>
+      <td>-38.437019</td>
+      <td>278.277741</td>
+      <td>-0.054085</td>
+      <td>0.388819</td>
+      <td>0.107419</td>
+      <td>0.632567</td>
+      <td>0.165363</td>
+      <td>8.022282e-03</td>
+      <td>-0.262740</td>
+      <td>0.708042</td>
+      <td>-0.129132</td>
+      <td>3.895655e-02</td>
+    </tr>
+    <tr>
+      <td>12</td>
+      <td><img class="face-img" src="images/2D/sub12y_pos.png"></td>
+      <td><img class="face-img" src="images/2D/sub12y_neg.png"></td>
+      <td><img class="face-img" src="images/2D/sub12x_pos.png"></td>
+      <td><img class="face-img" src="images/2D/sub12x_neg.png"></td>
+      <td>37.268404</td>
+      <td>252.502745</td>
+      <td>0.113375</td>
+      <td>0.070147</td>
+      <td>0.304661</td>
+      <td>0.375101</td>
+      <td>0.406185</td>
+      <td>1.371653e-11</td>
+      <td>0.331996</td>
+      <td>0.445998</td>
+      <td>0.287592</td>
+      <td>2.894603e-06</td>
+    </tr>
+    <tr>
+      <td>13</td>
+      <td><img class="face-img" src="images/2D/sub13y_pos.png"></td>
+      <td><img class="face-img" src="images/2D/sub13y_neg.png"></td>
+      <td><img class="face-img" src="images/2D/sub13x_pos.png"></td>
+      <td><img class="face-img" src="images/2D/sub13x_neg.png"></td>
+      <td>-182.725802</td>
+      <td>438.458854</td>
+      <td>-0.260774</td>
+      <td>0.000048</td>
+      <td>0.220737</td>
+      <td>0.485328</td>
+      <td>0.299343</td>
+      <td>2.705448e-06</td>
+      <td>0.402214</td>
+      <td>0.236627</td>
+      <td>0.351417</td>
+      <td>2.701853e-08</td>
+    </tr>
+    <tr>
+      <td>14</td>
+      <td><img class="face-img" src="images/2D/sub14y_pos.png"></td>
+      <td><img class="face-img" src="images/2D/sub14y_neg.png"></td>
+      <td><img class="face-img" src="images/2D/sub14x_pos.png"></td>
+      <td><img class="face-img" src="images/2D/sub14x_neg.png"></td>
+      <td>-18.744617</td>
+      <td>315.344776</td>
+      <td>-0.028219</td>
+      <td>0.655727</td>
+      <td>0.093631</td>
+      <td>0.642215</td>
+      <td>0.142919</td>
+      <td>2.325872e-02</td>
+      <td>0.199970</td>
+      <td>0.491765</td>
+      <td>0.117935</td>
+      <td>6.157071e-02</td>
+    </tr>
+    <tr>
+      <td>15</td>
+      <td><img class="face-img" src="images/2D/sub15y_pos.png"></td>
+      <td><img class="face-img" src="images/2D/sub15y_neg.png"></td>
+      <td><img class="face-img" src="images/2D/sub15x_pos.png"></td>
+      <td><img class="face-img" src="images/2D/sub15x_neg.png"></td>
+      <td>-84.900945</td>
+      <td>367.106884</td>
+      <td>-0.211211</td>
+      <td>0.000687</td>
+      <td>0.315994</td>
+      <td>0.402200</td>
+      <td>0.416320</td>
+      <td>4.128503e-12</td>
+      <td>0.152695</td>
+      <td>0.357616</td>
+      <td>0.147151</td>
+      <td>1.871910e-02</td>
+    </tr>
+    <tr>
+      <td>16</td>
+      <td><img class="face-img" src="images/2D/sub16y_pos.png"></td>
+      <td><img class="face-img" src="images/2D/sub16y_neg.png"></td>
+      <td><img class="face-img" src="images/2D/sub16x_pos.png"></td>
+      <td><img class="face-img" src="images/2D/sub16x_neg.png"></td>
+      <td>-114.858673</td>
+      <td>381.629086</td>
+      <td>-0.178279</td>
+      <td>0.004951</td>
+      <td>0.240827</td>
+      <td>0.411072</td>
+      <td>0.330536</td>
+      <td>1.045235e-07</td>
+      <td>-0.106561</td>
+      <td>0.478617</td>
+      <td>-0.060502</td>
+      <td>3.436881e-01</td>
+    </tr>
+    <tr>
+      <td>17</td>
+      <td><img class="face-img" src="images/2D/sub17y_pos.png"></td>
+      <td><img class="face-img" src="images/2D/sub17y_neg.png"></td>
+      <td><img class="face-img" src="images/2D/sub17x_pos.png"></td>
+      <td><img class="face-img" src="images/2D/sub17x_neg.png"></td>
+      <td>-134.247143</td>
+      <td>386.814594</td>
+      <td>-0.203193</td>
+      <td>0.001078</td>
+      <td>0.199247</td>
+      <td>0.568582</td>
+      <td>0.273404</td>
+      <td>9.084017e-06</td>
+      <td>0.369385</td>
+      <td>0.405171</td>
+      <td>0.210973</td>
+      <td>6.803544e-04</td>
+    </tr>
+    <tr>
+      <td>18</td>
+      <td><img class="face-img" src="images/2D/sub18y_pos.png"></td>
+      <td><img class="face-img" src="images/2D/sub18y_neg.png"></td>
+      <td><img class="face-img" src="images/2D/sub18x_pos.png"></td>
+      <td><img class="face-img" src="images/2D/sub18x_neg.png"></td>
+      <td>-196.529524</td>
+      <td>566.803826</td>
+      <td>-0.238110</td>
+      <td>0.000120</td>
+      <td>0.401222</td>
+      <td>0.409926</td>
+      <td>0.513699</td>
+      <td>1.218274e-18</td>
+      <td>0.530222</td>
+      <td>0.325057</td>
+      <td>0.503545</td>
+      <td>7.290239e-18</td>
+    </tr>
+    <tr>
+      <td>19</td>
+      <td><img class="face-img" src="images/2D/sub19y_pos.png"></td>
+      <td><img class="face-img" src="images/2D/sub19y_neg.png"></td>
+      <td><img class="face-img" src="images/2D/sub19x_pos.png"></td>
+      <td><img class="face-img" src="images/2D/sub19x_neg.png"></td>
+      <td>-102.620919</td>
+      <td>484.685589</td>
+      <td>-0.182302</td>
+      <td>0.003551</td>
+      <td>0.080606</td>
+      <td>0.528515</td>
+      <td>0.120181</td>
+      <td>5.576500e-02</td>
+      <td>0.033750</td>
+      <td>0.548638</td>
+      <td>0.028496</td>
+      <td>6.512658e-01</td>
+    </tr>
+    <tr>
+      <td>20</td>
+      <td><img class="face-img" src="images/2D/sub20y_pos.png"></td>
+      <td><img class="face-img" src="images/2D/sub20y_neg.png"></td>
+      <td><img class="face-img" src="images/2D/sub20x_pos.png"></td>
+      <td><img class="face-img" src="images/2D/sub20x_neg.png"></td>
+      <td>85.168785</td>
+      <td>217.221981</td>
+      <td>0.162273</td>
+      <td>0.009437</td>
+      <td>0.286156</td>
+      <td>0.453481</td>
+      <td>0.388671</td>
+      <td>1.270267e-10</td>
+      <td>0.456146</td>
+      <td>0.410984</td>
+      <td>0.285445</td>
+      <td>3.612153e-06</td>
+    </tr>
+    <tr>
+      <td>21</td>
+      <td><img class="face-img" src="images/2D/sub21y_pos.png"></td>
+      <td><img class="face-img" src="images/2D/sub21y_neg.png"></td>
+      <td><img class="face-img" src="images/2D/sub21x_pos.png"></td>
+      <td><img class="face-img" src="images/2D/sub21x_neg.png"></td>
+      <td>-16.991905</td>
+      <td>372.249412</td>
+      <td>-0.015699</td>
+      <td>0.810004</td>
+      <td>0.157148</td>
+      <td>0.524572</td>
+      <td>0.217181</td>
+      <td>7.625478e-04</td>
+      <td>0.029274</td>
+      <td>0.582404</td>
+      <td>0.019686</td>
+      <td>7.630442e-01</td>
+    </tr>
+    <tr>
+      <td>22</td>
+      <td><img class="face-img" src="images/2D/sub22y_pos.png"></td>
+      <td><img class="face-img" src="images/2D/sub22y_neg.png"></td>
+      <td><img class="face-img" src="images/2D/sub22x_pos.png"></td>
+      <td><img class="face-img" src="images/2D/sub22x_neg.png"></td>
+      <td>-22.606699</td>
+      <td>299.005496</td>
+      <td>-0.061077</td>
+      <td>0.339113</td>
+      <td>0.165926</td>
+      <td>0.546695</td>
+      <td>0.235317</td>
+      <td>1.899021e-04</td>
+      <td>0.373505</td>
+      <td>0.320504</td>
+      <td>0.277582</td>
+      <td>9.523073e-06</td>
+    </tr>
+    <tr>
+      <td>23</td>
+      <td><img class="face-img" src="images/2D/sub23y_pos.png"></td>
+      <td><img class="face-img" src="images/2D/sub23y_neg.png"></td>
+      <td><img class="face-img" src="images/2D/sub23x_pos.png"></td>
+      <td><img class="face-img" src="images/2D/sub23x_neg.png"></td>
+      <td>16.388102</td>
+      <td>325.852230</td>
+      <td>0.022259</td>
+      <td>0.724061</td>
+      <td>0.228306</td>
+      <td>0.533559</td>
+      <td>0.319908</td>
+      <td>1.878981e-07</td>
+      <td>0.332348</td>
+      <td>0.453829</td>
+      <td>0.229717</td>
+      <td>2.220368e-04</td>
+    </tr>
+    <tr>
+      <td>24</td>
+      <td><img class="face-img" src="images/2D/sub24y_pos.png"></td>
+      <td><img class="face-img" src="images/2D/sub24y_neg.png"></td>
+      <td><img class="face-img" src="images/2D/sub24x_pos.png"></td>
+      <td><img class="face-img" src="images/2D/sub24x_neg.png"></td>
+      <td>-16.162813</td>
+      <td>313.017078</td>
+      <td>-0.026958</td>
+      <td>0.668322</td>
+      <td>0.052399</td>
+      <td>0.561537</td>
+      <td>0.083653</td>
+      <td>1.829926e-01</td>
+      <td>0.130291</td>
+      <td>0.581722</td>
+      <td>0.161523</td>
+      <td>9.776504e-03</td>
+    </tr>
+    <tr>
+      <td>25</td>
+      <td><img class="face-img" src="images/2D/sub25y_pos.png"></td>
+      <td><img class="face-img" src="images/2D/sub25y_neg.png"></td>
+      <td><img class="face-img" src="images/2D/sub25x_pos.png"></td>
+      <td><img class="face-img" src="images/2D/sub25x_neg.png"></td>
+      <td>-12.047385</td>
+      <td>285.308617</td>
+      <td>-0.033595</td>
+      <td>0.593351</td>
+      <td>0.202904</td>
+      <td>0.637620</td>
+      <td>0.283225</td>
+      <td>4.328414e-06</td>
+      <td>0.167184</td>
+      <td>0.547797</td>
+      <td>0.134038</td>
+      <td>3.239024e-02</td>
+    </tr>
+    <tr>
+      <td>26</td>
+      <td><img class="face-img" src="images/2D/sub26y_pos.png"></td>
+      <td><img class="face-img" src="images/2D/sub26y_neg.png"></td>
+      <td><img class="face-img" src="images/2D/sub26x_pos.png"></td>
+      <td><img class="face-img" src="images/2D/sub26x_neg.png"></td>
+      <td>-122.407226</td>
+      <td>585.534828</td>
+      <td>-0.047927</td>
+      <td>0.448773</td>
+      <td>0.031120</td>
+      <td>0.738007</td>
+      <td>0.049674</td>
+      <td>4.323835e-01</td>
+      <td>-0.027567</td>
+      <td>0.732255</td>
+      <td>-0.016597</td>
+      <td>7.931798e-01</td>
+    </tr>
+    <tr>
+      <td>27</td>
+      <td><img class="face-img" src="images/2D/sub27y_pos.png"></td>
+      <td><img class="face-img" src="images/2D/sub27y_neg.png"></td>
+      <td><img class="face-img" src="images/2D/sub27x_pos.png"></td>
+      <td><img class="face-img" src="images/2D/sub27x_neg.png"></td>
+      <td>0.669251</td>
+      <td>409.763972</td>
+      <td>0.001355</td>
+      <td>0.982791</td>
+      <td>0.043721</td>
+      <td>0.643194</td>
+      <td>0.067680</td>
+      <td>2.806663e-01</td>
+      <td>0.017364</td>
+      <td>0.612110</td>
+      <td>0.017846</td>
+      <td>7.762902e-01</td>
+    </tr>
+    <tr>
+      <td>28</td>
+      <td><img class="face-img" src="images/2D/sub28y_pos.png"></td>
+      <td><img class="face-img" src="images/2D/sub28y_neg.png"></td>
+      <td><img class="face-img" src="images/2D/sub28x_pos.png"></td>
+      <td><img class="face-img" src="images/2D/sub28x_neg.png"></td>
+      <td>-115.998476</td>
+      <td>335.837649</td>
+      <td>-0.127293</td>
+      <td>0.041850</td>
+      <td>0.106943</td>
+      <td>0.657433</td>
+      <td>0.159904</td>
+      <td>1.039346e-02</td>
+      <td>0.310626</td>
+      <td>0.480675</td>
+      <td>0.119604</td>
+      <td>5.598278e-02</td>
+    </tr>
+    <tr>
+      <td>29</td>
+      <td><img class="face-img" src="images/2D/sub29y_pos.png"></td>
+      <td><img class="face-img" src="images/2D/sub29y_neg.png"></td>
+      <td><img class="face-img" src="images/2D/sub29x_pos.png"></td>
+      <td><img class="face-img" src="images/2D/sub29x_neg.png"></td>
+      <td>42.989027</td>
+      <td>278.607910</td>
+      <td>0.075411</td>
+      <td>0.230137</td>
+      <td>0.346468</td>
+      <td>0.353885</td>
+      <td>0.446485</td>
+      <td>6.747443e-14</td>
+      <td>0.335274</td>
+      <td>0.457662</td>
+      <td>0.324103</td>
+      <td>1.198895e-07</td>
+    </tr>
+    <tr>
+      <td>30</td>
+      <td><img class="face-img" src="images/2D/sub30y_pos.png"></td>
+      <td><img class="face-img" src="images/2D/sub30y_neg.png"></td>
+      <td><img class="face-img" src="images/2D/sub30x_pos.png"></td>
+      <td><img class="face-img" src="images/2D/sub30x_neg.png"></td>
+      <td>96.858476</td>
+      <td>549.375211</td>
+      <td>0.063309</td>
+      <td>0.312975</td>
+      <td>0.054996</td>
+      <td>0.490143</td>
+      <td>0.087554</td>
+      <td>1.625083e-01</td>
+      <td>0.029746</td>
+      <td>0.377390</td>
+      <td>0.020888</td>
+      <td>7.394297e-01</td>
+    </tr>
+    <tr>
+      <td>31</td>
+      <td><img class="face-img" src="images/2D/sub31y_pos.png"></td>
+      <td><img class="face-img" src="images/2D/sub31y_neg.png"></td>
+      <td><img class="face-img" src="images/2D/sub31x_pos.png"></td>
+      <td><img class="face-img" src="images/2D/sub31x_neg.png"></td>
+      <td>-27.330112</td>
+      <td>361.339327</td>
+      <td>-0.069919</td>
+      <td>0.265026</td>
+      <td>0.297044</td>
+      <td>0.442372</td>
+      <td>0.399582</td>
+      <td>3.121483e-11</td>
+      <td>0.248053</td>
+      <td>0.555046</td>
+      <td>0.227689</td>
+      <td>2.391937e-04</td>
+    </tr>
+    <tr>
+      <td>32</td>
+      <td><img class="face-img" src="images/2D/sub32y_pos.png"></td>
+      <td><img class="face-img" src="images/2D/sub32y_neg.png"></td>
+      <td><img class="face-img" src="images/2D/sub32x_pos.png"></td>
+      <td><img class="face-img" src="images/2D/sub32x_neg.png"></td>
+      <td>-110.923919</td>
+      <td>337.527335</td>
+      <td>-0.231712</td>
+      <td>0.000201</td>
+      <td>0.320137</td>
+      <td>0.407587</td>
+      <td>0.411349</td>
+      <td>9.455577e-12</td>
+      <td>0.334859</td>
+      <td>0.463215</td>
+      <td>0.278343</td>
+      <td>6.972410e-06</td>
+    </tr>
+    <tr>
+      <td>33</td>
+      <td><img class="face-img" src="images/2D/sub33y_pos.png"></td>
+      <td><img class="face-img" src="images/2D/sub33y_neg.png"></td>
+      <td><img class="face-img" src="images/2D/sub33x_pos.png"></td>
+      <td><img class="face-img" src="images/2D/sub33x_neg.png"></td>
+      <td>52.502149</td>
+      <td>510.140259</td>
+      <td>0.051582</td>
+      <td>0.413957</td>
+      <td>0.068390</td>
+      <td>0.650816</td>
+      <td>0.104098</td>
+      <td>9.851913e-02</td>
+      <td>0.115534</td>
+      <td>0.546323</td>
+      <td>0.095946</td>
+      <td>1.279924e-01</td>
+    </tr>
+    <tr>
+      <td>34</td>
+      <td><img class="face-img" src="images/2D/sub34y_pos.png"></td>
+      <td><img class="face-img" src="images/2D/sub34y_neg.png"></td>
+      <td><img class="face-img" src="images/2D/sub34x_pos.png"></td>
+      <td><img class="face-img" src="images/2D/sub34x_neg.png"></td>
+      <td>-34.572781</td>
+      <td>303.915935</td>
+      <td>-0.050566</td>
+      <td>0.422303</td>
+      <td>0.251491</td>
+      <td>0.414271</td>
+      <td>0.337639</td>
+      <td>3.440438e-08</td>
+      <td>0.044718</td>
+      <td>0.405533</td>
+      <td>0.026252</td>
+      <td>6.771212e-01</td>
+    </tr>
+    <tr>
+      <td>35</td>
+      <td><img class="face-img" src="images/2D/sub35y_pos.png"></td>
+      <td><img class="face-img" src="images/2D/sub35y_neg.png"></td>
+      <td><img class="face-img" src="images/2D/sub35x_pos.png"></td>
+      <td><img class="face-img" src="images/2D/sub35x_neg.png"></td>
+      <td>-115.008345</td>
+      <td>477.485057</td>
+      <td>-0.103946</td>
+      <td>0.097679</td>
+      <td>-0.039240</td>
+      <td>0.772167</td>
+      <td>-0.064081</td>
+      <td>3.080560e-01</td>
+      <td>0.128445</td>
+      <td>0.689983</td>
+      <td>0.118386</td>
+      <td>5.904839e-02</td>
+    </tr>
+    <tr>
+      <td>36</td>
+      <td><img class="face-img" src="images/2D/sub36y_pos.png"></td>
+      <td><img class="face-img" src="images/2D/sub36y_neg.png"></td>
+      <td><img class="face-img" src="images/2D/sub36x_pos.png"></td>
+      <td><img class="face-img" src="images/2D/sub36x_neg.png"></td>
+      <td>112.203554</td>
+      <td>193.022993</td>
+      <td>0.231924</td>
+      <td>0.000192</td>
+      <td>0.281184</td>
+      <td>0.510449</td>
+      <td>0.371554</td>
+      <td>9.801305e-10</td>
+      <td>0.248799</td>
+      <td>0.576309</td>
+      <td>0.204887</td>
+      <td>1.022874e-03</td>
+    </tr>
+    <tr>
+      <td>37</td>
+      <td><img class="face-img" src="images/2D/sub37y_pos.png"></td>
+      <td><img class="face-img" src="images/2D/sub37y_neg.png"></td>
+      <td><img class="face-img" src="images/2D/sub37x_pos.png"></td>
+      <td><img class="face-img" src="images/2D/sub37x_neg.png"></td>
+      <td>-126.271755</td>
+      <td>588.287127</td>
+      <td>-0.086305</td>
+      <td>0.194138</td>
+      <td>0.097811</td>
+      <td>0.574593</td>
+      <td>0.136712</td>
+      <td>3.914533e-02</td>
+      <td>-0.000023</td>
+      <td>0.280486</td>
+      <td>-0.000012</td>
+      <td>9.998567e-01</td>
+    </tr>
+    <tr>
+      <td>38</td>
+      <td><img class="face-img" src="images/2D/sub38y_pos.png"></td>
+      <td><img class="face-img" src="images/2D/sub38y_neg.png"></td>
+      <td><img class="face-img" src="images/2D/sub38x_pos.png"></td>
+      <td><img class="face-img" src="images/2D/sub38x_neg.png"></td>
+      <td>17.464761</td>
+      <td>247.046623</td>
+      <td>0.034981</td>
+      <td>0.580462</td>
+      <td>0.299451</td>
+      <td>0.560225</td>
+      <td>0.393937</td>
+      <td>8.775679e-11</td>
+      <td>0.223544</td>
+      <td>0.539282</td>
+      <td>0.162501</td>
+      <td>9.766501e-03</td>
+    </tr>
+    <tr>
+      <td>39</td>
+      <td><img class="face-img" src="images/2D/sub39y_pos.png"></td>
+      <td><img class="face-img" src="images/2D/sub39y_neg.png"></td>
+      <td><img class="face-img" src="images/2D/sub39x_pos.png"></td>
+      <td><img class="face-img" src="images/2D/sub39x_neg.png"></td>
+      <td>-29.790764</td>
+      <td>290.353962</td>
+      <td>-0.066372</td>
+      <td>0.290095</td>
+      <td>0.107091</td>
+      <td>0.595519</td>
+      <td>0.163828</td>
+      <td>8.634544e-03</td>
+      <td>0.076528</td>
+      <td>0.599245</td>
+      <td>0.054822</td>
+      <td>3.823793e-01</td>
+    </tr>
+    <tr>
+      <td>40</td>
+      <td><img class="face-img" src="images/2D/sub40y_pos.png"></td>
+      <td><img class="face-img" src="images/2D/sub40y_neg.png"></td>
+      <td><img class="face-img" src="images/2D/sub40x_pos.png"></td>
+      <td><img class="face-img" src="images/2D/sub40x_neg.png"></td>
+      <td>-6.436055</td>
+      <td>307.556920</td>
+      <td>-0.017637</td>
+      <td>0.779261</td>
+      <td>0.027786</td>
+      <td>0.534450</td>
+      <td>0.044882</td>
+      <td>4.755124e-01</td>
+      <td>-0.033687</td>
+      <td>0.623950</td>
+      <td>-0.029036</td>
+      <td>6.444534e-01</td>
+    </tr>
+  </tbody>
+</table>
+</body>
+</html>
