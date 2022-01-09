@@ -70,15 +70,6 @@
         <div id="users">
             <input class="search" placeholder="Search" />
             <ul class="list"></ul>
-            <!-- <ul class="list">
-                <li data-id="1">
-                    <p class="title"> </p>
-                    <p class="authors"> </p>
-                    <p class="year"> </p>
-                    <p class="journal"> </p>
-                    <a class="link_journal" href> Article </a>
-                </li>
-            </ul> -->
         </div>
 
     </div><!-- /container -->
@@ -130,7 +121,14 @@
             { attr: 'href', name: 'link-pdf' },
             { attr: 'href', name: 'link-supplement' },
             { attr: 'href', name: 'link-preregistration' }
-        ]
+        ],
+        item: `<li>
+            <p class="title"> </p>
+            <p class="authors"> </p>
+            <p class="year"> </p>
+            <p class="journal"> </p>
+            <a class="link_journal" href> Article </a>
+            </li>`
     };
 
     var userList = new List('users', options);
