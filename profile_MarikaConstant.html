@@ -16,7 +16,11 @@
 
   <!-- Custom styles for this template -->
   <link href="assets/css/main.css" rel="stylesheet">
-
+  
+  <script type='text/javascript' src='allArticles.js'></script>
+  <script type='text/javascript' src='allPosters.js'></script>
+  <script type='text/javascript' src='assets/js/list.min.js'></script>
+  <link href="assets/css/list.css" rel="stylesheet">
   <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
 </head>
 
@@ -84,28 +88,19 @@
     <p><b><a href="https://scholar.google.com/citations?user=TjIo3CAAAAAJ&hl=en&oi=ao">Google Scholar Profile</a></b></p>
 
 
-    <p><b>Publications</b></p>
+    <p><br><b>Journal Articles</b></p>
 
-    <p><b>Submitted / In Prep</b></p>
+    <div id="papers">
+      <input class="search" placeholder="Search" />
+      <ul class="list"></ul>
+    </div>
 
-    <p><b>Constant, M.</b>, Salomon, R., Filevich, E. (2021) Judgments of agency are affected by sensory noise without
-      recruiting metacognitive processing.
-      <b><i>Submitted</i></b>
-      <a href="https://www.biorxiv.org/content/10.1101/2021.04.28.441761v1">[BioRxiv]</a>
-      <a href="https://gitlab.com/MarikaConstant/metaAgency">[Data and Scripts]</a>
-    </p>
+    <p><br><b>Posters</b></p>
 
-
-    <!-- <p><b><i>Peer-Reviewed</i></b></p> -->
-
-
-    <p><b>Posters</b></p>
-
-    <p><b>Constant, M.*</b>, Filevich, E. (2021) Are Agency judgments metacognitive?
-      <i> Mind, Brain, Body Symposium, MindBrainBody Institute</i>. <a
-        href="pdfs/D10_Constant.pdf">[Poster]</a>
-    </p>
-
+    <div id="posters">
+      <input class="search" placeholder="Search" />
+      <ul class="list"></ul>
+    </div>
 
 
 
@@ -150,5 +145,65 @@
   <!-- Placed at the end of the document so the pages load faster -->
   <script src="assets/js/bootstrap.min.js"></script>
 </body>
+
+<script>
+  var options = {
+    valueNames: [
+      'title',
+      'year',
+      'authors',
+      'journal',
+      { data: ['id'] },
+      { attr: 'href', name: 'link_journal' },
+      { attr: 'href', name: 'link-pdf' },
+      { attr: 'href', name: 'link-supplement' },
+      { attr: 'href', name: 'link-preregistration' }
+    ],
+    item: `<li>
+          <p class="title"> </p>
+          <p class="authors"> </p>
+          <p class="year"> </p>
+          <p class="journal"> </p>
+          <a class="link_journal" href> Article </a>
+          </li>`
+  };
+
+  var optionsPosters = {
+    valueNames: [
+      'title',
+      'year',
+      'authors',
+      'journal',
+      { data: ['id'] },
+      { attr: 'href', name: 'link_journal' },
+      { attr: 'href', name: 'link-pdf' },
+      { attr: 'href', name: 'link-supplement' },
+      { attr: 'href', name: 'link-preregistration' }
+    ],
+    item: `<li>
+          <p class="title"> </p>
+          <p class="authors"> </p>
+          <p class="year"> </p>
+          <p class="journal"> </p>
+          <a class="link_journal" href> PDF </a>
+          </li>`
+  };
+
+  var paperList = new List('papers', options);
+  for (let p = 0; p < allArticles.length; p++) {
+    if (allArticles[p].authors.includes("Constant")) {
+      paperList.add(allArticles[p]);
+    }
+  }
+
+  var posterList = new List('posters', optionsPosters);
+  for (let p = 0; p < allPosters.length; p++) {
+    if (allPosters[p].authors.includes("Constant")) {
+      posterList.add(allPosters[p]);
+    }
+  }
+
+
+</script>
 
 </html>

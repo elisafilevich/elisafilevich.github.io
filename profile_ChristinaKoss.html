@@ -16,7 +16,10 @@
 
   <!-- Custom styles for this template -->
   <link href="assets/css/main.css" rel="stylesheet">
-
+  <script type='text/javascript' src='allArticles.js'></script>
+  <script type='text/javascript' src='allPosters.js'></script>
+  <script type='text/javascript' src='assets/js/list.min.js'></script>
+  <link href="assets/css/list.css" rel="stylesheet">
   <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
 </head>
 
@@ -57,33 +60,20 @@
       </div>
     </div>
 
+    <p><br><b>Journal Articles</b></p>
 
-    <p><b>Publications</b></p>
-
-    <p><b>In Press / Submitted / In Prep</b></p>
-
-    <p>Arbuzova, P., Peters, C., Roed, L., <b>Koss, C.</b>, Maurer, H., Maurer, L. K., Mueller, H., Verrel, J., &
-      Filevich, E. (2020). Measuring Metacognition of Direct and Indirect Parameters of Voluntary Movement.<b><i>Under
-          Review</i></b>. <a href="https://doi.org/10.1101/2020.05.14.092189">[BioRxiv]</a> <a
-          href="https://psycnet.apa.org/record/2021-39818-001">[Paper]</a>
-          <a href="https://osf.io/kyhu7/">[Preregistration, Data, and Scripts Exp 1]</a>
-          <a href="https://osf.io/sy342/">[Preregistration, Data, and Scripts Exp 2]</a>
-          <a href="pdfs/MeasuringMetacognitionofMovementParameters.pdf">[PDF]</a>
-          <a href="pdfs/ArbuzovaEtAl_2020_SI.pdf">[Supplementary Information]</a>
-        </p>
-
-    <p><b>Peer-Reviewed</b></p>
-
-    <p>Filevich, E., <b> Koss, C.</b> Faivre, N. (2020). Response-related signals increase confidence but not
-      metacognitive performance. eNeuro 0326-19.2020 <a href="https://www.eneuro.org/content/7/3/ENEURO.0326-19.2020">[Open Access Link]</a> 
-      <a href="https://doi.org/10.1101/735712">[BioRxiv]</a></p>
-
-
-    <p>Rahnev, D., Adler, W. T., Aguilar-Lleyda, D., Akdoğan, B., Arbuzova, P., Atlas, L. Y., … Zylberberg, A. The
-      confidence database. Nat Hum Behav 4, 317–325 (2020) <a href="https://osf.io/s46pr/">[Database]</a> <a
-        href="https://www.nature.com/articles/s41562-019-0813-1">[Paper]</a> <a
-        href="https://psyarxiv.com/h8tju">[PrePrint]</a></p>
-
+    <div id="papers">
+      <input class="search" placeholder="Search" />
+      <ul class="list"></ul>
+    </div>
+    
+    <p><br><b>Posters</b></p>
+    
+    <div id="posters">
+      <input class="search" placeholder="Search" />
+      <ul class="list"></ul>
+    </div>
+    
 
   </div><!-- /container -->
 
@@ -126,5 +116,66 @@
   <!-- Placed at the end of the document so the pages load faster -->
   <script src="assets/js/bootstrap.min.js"></script>
 </body>
+
+<script>
+  var options = {
+    valueNames: [
+      'title',
+      'year',
+      'authors',
+      'journal',
+      { data: ['id'] },
+      { attr: 'href', name: 'link_journal' },
+      { attr: 'href', name: 'link-pdf' },
+      { attr: 'href', name: 'link-supplement' },
+      { attr: 'href', name: 'link-preregistration' }
+    ],
+    item: `<li>
+          <p class="title"> </p>
+          <p class="authors"> </p>
+          <p class="year"> </p>
+          <p class="journal"> </p>
+          <a class="link_journal" href> Article </a>
+          </li>`
+  };
+
+
+  var optionsPosters = {
+    valueNames: [
+      'title',
+      'year',
+      'authors',
+      'journal',
+      { data: ['id'] },
+      { attr: 'href', name: 'link_journal' },
+      { attr: 'href', name: 'link-pdf' },
+      { attr: 'href', name: 'link-supplement' },
+      { attr: 'href', name: 'link-preregistration' }
+    ],
+    item: `<li>
+          <p class="title"> </p>
+          <p class="authors"> </p>
+          <p class="year"> </p>
+          <p class="journal"> </p>
+          <a class="link_journal" href> PDF </a>
+          </li>`
+  };
+
+  var paperList = new List('papers', options);
+  for (let p = 0; p < allArticles.length; p++) {
+    if (allArticles[p].authors.includes("Koß")) {
+      paperList.add(allArticles[p]);
+    }
+  }
+
+  var posterList = new List('posters', optionsPosters);
+  for (let p = 0; p < allPosters.length; p++) {
+    if (allPosters[p].authors.includes("Koß")) {
+      posterList.add(allPosters[p]);
+    }
+  }
+
+
+</script>
 
 </html>

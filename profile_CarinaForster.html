@@ -10,13 +10,17 @@
 
 	<title>MetaMotor - Lab </title>
 
-	<!-- Bootstrap core CSS -->
-	<link href="assets/css/bootstrap.css" rel="stylesheet">
+<!-- Bootstrap core CSS -->
+<link href="assets/css/bootstrap.css" rel="stylesheet">
 
-	<!-- Custom styles for this template -->
-	<link href="assets/css/main.css" rel="stylesheet">
+<!-- Custom styles for this template -->
+<link href="assets/css/main.css" rel="stylesheet">
 
-	<script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+<script type='text/javascript' src='allArticles.js'></script>
+<script type='text/javascript' src='allPosters.js'></script>
+<script type='text/javascript' src='assets/js/list.min.js'></script>
+<link href="assets/css/list.css" rel="stylesheet">
+<script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
 </head>
 
 <body>
@@ -55,20 +59,19 @@
   </div>
 </div>
 
-<p><b>In Press / Submitted / In Prep</b></p>
+<p><br><b>Journal Articles</b></p>
 
-<p>Ciston, AB*., <b>Forster, C.*</b>, Brick, TR., Kühn, S., Verrel, J., Filevich, E. 
-  (2021) Limited metacognitive access to one’s own facial expressions. <b><i>Under Review</i></b>
-  <a href="https://www.biorxiv.org/content/10.1101/2021.03.08.434069v1">[BioRxiv]</a></p>
-</p>      
+<div id="papers">
+  <input class="search" placeholder="Search" />
+  <ul class="list"></ul>
+</div>
 
-<p><br><b>Peer-reviewed</b>
+<p><br><b>Posters</b></p>
 
-  <p>Filevich, E., Forlim, C. G., Fehrman, C., <b>Forster, C.</b>, Paulus, M., Shing, Y. L., & Kühn, S. (2020). I know
-    that I know nothing: Cortical thickness and functional connectivity underlying meta-ignorance ability in
-    pre-schoolers. Developmental Cognitive Neuroscience, 41, 100738. <a
-      href="https://doi.org/10.1016/j.dcn.2019.100738">[Open Access Link]</a></p>
-
+<div id="posters">
+  <input class="search" placeholder="Search" />
+  <ul class="list"></ul>
+</div>
 
 
 </div><!-- /container -->
@@ -110,4 +113,65 @@
       <!-- Placed at the end of the document so the pages load faster -->
       <script src="assets/js/bootstrap.min.js"></script>
     </body>
+
+<script>
+  var options = {
+    valueNames: [
+      'title',
+      'year',
+      'authors',
+      'journal',
+      { data: ['id'] },
+      { attr: 'href', name: 'link_journal' },
+      { attr: 'href', name: 'link-pdf' },
+      { attr: 'href', name: 'link-supplement' },
+      { attr: 'href', name: 'link-preregistration' }
+    ],
+    item: `<li>
+          <p class="title"> </p>
+          <p class="authors"> </p>
+          <p class="year"> </p>
+          <p class="journal"> </p>
+          <a class="link_journal" href> Article </a>
+          </li>`
+  };
+
+
+  var optionsPosters = {
+    valueNames: [
+      'title',
+      'year',
+      'authors',
+      'journal',
+      { data: ['id'] },
+      { attr: 'href', name: 'link_journal' },
+      { attr: 'href', name: 'link-pdf' },
+      { attr: 'href', name: 'link-supplement' },
+      { attr: 'href', name: 'link-preregistration' }
+    ],
+    item: `<li>
+          <p class="title"> </p>
+          <p class="authors"> </p>
+          <p class="year"> </p>
+          <p class="journal"> </p>
+          <a class="link_journal" href> PDF </a>
+          </li>`
+  };
+
+  var paperList = new List('papers', options);
+  for (let p = 0; p < allArticles.length; p++) {
+    if (allArticles[p].authors.includes("Forster")) {
+      paperList.add(allArticles[p]);
+    }
+  }
+
+  var posterList = new List('posters', optionsPosters);
+  for (let p = 0; p < allPosters.length; p++) {
+    if (allPosters[p].authors.includes("Forster")) {
+      posterList.add(allPosters[p]);
+    }
+  }
+
+
+</script>
     </html>

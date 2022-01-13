@@ -10,12 +10,18 @@
 
 	<title>MetaMotor - Lab </title>
 
+    <!-- We dont need this here but this messes up with the header's format so I'll add it everywhere -->
+    <link href="assets/css/list.css" rel="stylesheet">
+
 	<!-- Bootstrap core CSS -->
 	<link href="assets/css/bootstrap.css" rel="stylesheet">
 
 	<!-- Custom styles for this template -->
 	<link href="assets/css/main.css" rel="stylesheet">
-
+  <script type='text/javascript' src='allArticles.js'></script>
+  <script type='text/javascript' src='allPosters.js'></script>
+  <script type='text/javascript' src='assets/js/list.min.js'></script>
+  <link href="assets/css/list.css" rel="stylesheet">
 	<script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
 </head>
 
@@ -55,14 +61,19 @@
   </div>
 </div>
 
-<p><b>Submitted / In Prep</b></p>
+<p><br><b>Journal Articles</b></p>
 
-<p><b>Ciston, AB*.</b>, Forster, C.*, Brick, TR., Kühn, S., Verrel, J., Filevich, E. 
-  (2021) Limited metacognitive access to one’s own facial expressions. <b><i>Under Review</i></b>
-  <a href="https://www.biorxiv.org/content/10.1101/2021.03.08.434069v1">[BioRxiv]</a>
-  <a href="https://osf.io/pnyw3">[Pre-registration]</a>
-  <a href="https://gitlab.com/elisa.filevich/cistonetal_metacognitionoffacialexpressions">[Data and Scripts]</a>
-</p>      
+    <div id="papers">
+      <input class="search" placeholder="Search" />
+      <ul class="list"></ul>
+    </div>
+
+    <p><br><b>Posters</b></p>
+
+    <div id="posters">
+      <input class="search" placeholder="Search" />
+      <ul class="list"></ul>
+    </div>
 
 
 </div><!-- /container -->
@@ -104,4 +115,44 @@
       <!-- Placed at the end of the document so the pages load faster -->
       <script src="assets/js/bootstrap.min.js"></script>
     </body>
+
+
+<script>
+  var options = {
+      valueNames: [
+          'title',
+          'year',
+          'authors',
+          'journal',
+          { data: ['id'] },
+          { attr: 'href', name: 'link_journal' },
+          { attr: 'href', name: 'link-pdf' },
+          { attr: 'href', name: 'link-supplement' },
+          { attr: 'href', name: 'link-preregistration' }
+      ],
+      item: `<li>
+          <p class="title"> </p>
+          <p class="authors"> </p>
+          <p class="year"> </p>
+          <p class="journal"> </p>
+          <a class="link_journal" href> Article </a>
+          </li>`
+  };
+
+  var paperList = new List('papers', options);
+  for (let p = 0; p < allArticles.length; p++) {
+      if (allArticles[p].authors.includes("Ciston")) {
+          paperList.add(allArticles[p]);
+      }
+  }
+
+  var chapterList = new List('chapters', options);
+  for (let p = 0; p < allArticles.length; p++) {
+      if (allChapters[p].authors.includes("Ciston")) {
+          chapterList.add(allChapters[p]);
+      }
+  }
+
+
+</script>
     </html>
