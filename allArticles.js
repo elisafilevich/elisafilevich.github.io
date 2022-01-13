@@ -1,4 +1,11 @@
 var allArticles = [
+    {id: 23,
+        title: 'Intact visual and tactile metacognition in adults with Tourette disorder.',
+        authors: 'Arbuzova, P., Guo, S., Koß, C., Kurvis, L., Faivre, N., Kühn, A., Filevich, E., Ganos, C.',
+        journal: '(Under Review)',
+        year: '2021',
+        link_journal: '',
+    },   
     {id: 22,
         title: 'Judgments of agency are affected by sensory noise without recruiting metacognitive processing.',
         authors: 'Constant, M., Salomon, R., Filevich, E.',
