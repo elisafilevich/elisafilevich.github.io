@@ -17,7 +17,7 @@ var allArticles = [
         authors: 'Ciston, AB.*, Forster, C.*, Brick, TR., Kühn, S., Verrel, J., Filevich, E.',
         journal: 'BioRXiv (Under Review)',
         year: '2021',
-        link_journal: 'https://www.biorxiv.org/content/10.1101/2021.04.28.441761v1',
+        link_journal: 'https://www.biorxiv.org/content/10.1101/2021.03.08.434069v1',
     },
     {id: 20,
         title: 'Consensus goals for the field of visual metacognition',
