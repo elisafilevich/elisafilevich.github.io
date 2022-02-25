@@ -132,26 +132,25 @@
 
 
 <script>
-  var options = {
-      valueNames: [
-          'title',
-          'year',
-          'authors',
-          'journal',
-          { data: ['id'] },
-          { attr: 'href', name: 'link_journal' },
-          { attr: 'href', name: 'link_pdf' },
-          { attr: 'href', name: 'link_supplement' },
-          { attr: 'href', name: 'link_preregistration' }
-      ],
-      item: `<li>
-          <p class="title"> </p>
-          <p class="authors"> </p>
-          <p class="year"> </p>
-          <p class="journal"> </p>
-          <a class="link_journal" href> Article </a>
-          </li>`
-  };
+var options = {
+        valueNames: [
+            'title',
+            'year',
+            'authors',
+            'journal',
+            { data: ['id'] },
+            { attr: 'href', name: 'link_journal' },
+            { attr: 'href', name: 'link_pdf' },
+        ],
+        item: `<li>
+            <p class="title"> </p>
+            <p class="authors"> </p>
+            <p class="year"> </p>
+            <p class="journal"> </p>
+            <a class="link_journal" href> Article link </a><br>
+            <a class="link_pdf" href> PDF </a>
+            </li>`
+    };
 
   var paperList = new List('papers', options);
   for (let p = 0; p < allArticles.length; p++) {
