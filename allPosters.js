@@ -5,7 +5,7 @@ var allPosters = [
         authors: 'Charalampaki, A., Filevich, E.',
         journal: 'Mind, Brain, Body Symposium, MindBrainBody Institute.',
         year: '2021',
-        link_journal: 'pdfs/A15_Charalampaki_MBB2021.pdf'
+        link_journal: 'pdfs_posters/Charalampaki_MBB20.pdf'
     },
     {
         id: 5,
@@ -13,7 +13,7 @@ var allPosters = [
         authors: 'Peters, C., Filevich, E.',
         journal: ' ASSC 23, London, Ontario',
         year: '2019',
-        link_journal: 'pdfs/Peters_Poster_ASSC.pdf'
+        link_journal: 'pdfs_posters/Peters_ASSC23.pdf'
     },
     {
         id: 4,
@@ -21,7 +21,7 @@ var allPosters = [
         authors: 'Constant, M., Filevich, E.',
         journal: ' Mind, Brain, Body Symposium, MindBrainBody Institute',
         year: '2021',
-        link_journal: 'pdfs/D10_Constant.pdf'
+        link_journal: 'pdfs_posters/Constant_BCCN20.pdf'
     },
     {
         id: 3,
@@ -29,7 +29,7 @@ var allPosters = [
         authors: 'Arbuzova, P. Filevich, E.',
         journal: 'Mind, Brain, Body Symposium, MindBrainBody Institute',
         year: '2021',
-        link_journal: 'pdfs/MBB2021_arbuzova.pdf'
+        link_journal: 'pdfs_posters/Arbuzova_MBB21.pdf'
     },
     {
         id: 2,
@@ -37,14 +37,14 @@ var allPosters = [
         authors: 'Arbuzova, P. Filevich, E.',
         journal: 'ASSC 23, London, Ontario',
         year: '2019',
-        link_journal: 'pdfs/ASSC23_Arbuzova_fixed_web.pdf'
+        link_journal: 'pdfs_posters/Arbuzova_ASSC23.pdf'
     }, {
         id: 1,
         title: 'Components of voluntary action',
         authors: 'Arbuzova, P., Peters, C., Röd, L., Koß, C., Forster, C., Filevich, E. ',
         journal: '9th Mind, Brain, Body Symposium, MindBrainBody Institute',
         year: '2019',
-        link_journal: 'pdfs/Arbuzova_MBB_poster_Skittles_PDF.pdf'
+        link_journal: 'pdfs_posters/Arbuzova_MBB19.pdf'
     }]
 
 

@@ -1,151 +1,200 @@
 var allArticles = [
-    {id: 23,
+    {
+        id: 24,
+        title: 'Probing EEG activity in the targeted cortex after focal transcranial electrical stimulation',
+        authors: 'Tashiro, S., Siebner, HR., Charalampaki, A, Göksu, C., Saturnino, GB, Thielscher, A., Tomasevic, L.',
+        journal: 'Brain Stimulation',
+        link_journal: 'https://www.sciencedirect.com/science/article/pii/S1935861X20300371',
+        link_pdf: 'pdfs_articles/Probing EEG activity in the targeted cortex after focal transcranial electrical stimulation.pdf'
+    },
+    {
+        id: 23,
         title: 'Intact visual and tactile metacognition in adults with Tourette disorder',
         authors: 'Arbuzova, P., Guo, S., Koß, C., Kurvis, L., Faivre, N., Kühn, A., Filevich, E., Ganos, C.',
         journal: '(Under Review)',
         year: '2021',
-        link_journal: ''
-    },   
-    {id: 22,
+        link_journal: '',
+        link_pdf: 'pdfs_articles/'
+    },
+    {
+        id: 22,
         title: 'Judgments of agency are affected by sensory noise without recruiting metacognitive processing',
         authors: 'Constant, M., Salomon, R., Filevich, E.',
         journal: 'eLife',
         year: '2022',
-        link_journal: 'https://elifesciences.org/articles/72356'
+        link_journal: 'https://elifesciences.org/articles/72356',
+        link_pdf: 'pdfs_articles/Judgments of agency are affected by sensory noise without recruiting metacognitive processing.pdf'
     },
-    {id: 21,
+    {
+        id: 21,
         title: 'Limited metacognitive access to one’s own facial expressions',
         authors: 'Ciston, AB.*, Forster, C.*, Brick, TR., Kühn, S., Verrel, J., Filevich, E.',
         journal: 'BioRXiv (Under Review)',
         year: '2021',
-        link_journal: 'https://www.biorxiv.org/content/10.1101/2021.03.08.434069v1'
+        link_journal: 'https://www.biorxiv.org/content/10.1101/2021.03.08.434069v1',
+        link_pdf: 'pdfs_articles/Limited metacognitive access to one’s own facial expressions.pdf'
     },
-    {id: 20,
+    {
+        id: 20,
         title: 'Consensus goals for the field of visual metacognition',
         authors: 'Rahnev, D., Balsdon, T., Charles, L., de Gardelle, V., Denison, R. N., Desender, K., …, Filevich, E., … Zylberberg, A.',
         journal: 'Perspectives on Psychological Science',
         year: '2022 - In Press',
-        link_journal: ''
+        link_journal: '',
+        link_pdf: 'pdfs_articles/Consensus goals for the field of visual metacognition.pdf'
     },
-    {id: 19,
-        title: 'Spent time outdoors for your brain: An in-depth longitudinal MRI study',
+    {
+        id: 19,
+        title: 'Spend time outdoors for your brain: An in-depth longitudinal MRI study',
         authors: 'Kühn, S., Mascherek, A., Filevich, E., Lisofsky, N., Becker, M., Butler, O., Lochstet, M., Mårtensson, J., Wenger, E., Lindenberger, U., Gallinat, J.',
         journal: 'The World Journal of Biological Psychiatry',
         year: '2021',
-        link_journal: 'https://pubmed.ncbi.nlm.nih.gov/34231438/'
+        link_journal: 'https://pubmed.ncbi.nlm.nih.gov/34231438/',
+        link_pdf: 'pdfs_articles/Spend time outdoors for your brain- An in-depth longitudinal MRI study.pdf'
     },
-    {id: 18,
-        title: 'Measuring Metacognition of Direct and Indirect Parameters of Voluntary Movement',
+    {
+        id: 18,
+        title: 'Measuring metacognition of direct and indirect parameters of voluntary movement',
         authors: 'Arbuzova, P., Peters, C., Roed, L., Koss, C., Maurer, H., Maurer, L. K., Mueller, H., Verrel, J., & Filevich, E.',
         journal: 'JEP:G',
         year: '2021',
         link_journal: 'https://psycnet.apa.org/record/2021-39818-001',
-        link_pdf: 'https://metamotorlab.filevich.com/pdfs/MeasuringMetacognitionofMovementParameters.pdf'
+        link_pdf: 'pdfs_articles/Measuring Metacognition of Direct and Indirect Parameters of Voluntary Movement.pdf'
     },
-    {id: 17,
+    {
+        id: 17,
         title: 'Response-related signals increase confidence but not metacognitive performance',
         authors: 'Filevich, E., Koss, C. Faivre, N.',
         journal: 'eNeuro',
         year: '2020',
-        link_journal: 'https://www.eneuro.org/content/7/3/ENEURO.0326-19.2020'
+        link_journal: 'https://www.eneuro.org/content/7/3/ENEURO.0326-19.2020',
+        link_pdf: 'pdfs_articles/Response-Related Signals Increase Confidence But Not Metacognitive Performance.pdf'
     },
-    {id: 16,
+    {
+        id: 16,
         title: 'The confidence database',
         authors: 'Rahnev, D., Adler, W. T., Aguilar-Lleyda, D., Akdoğan, B., Arbuzova, P., Atlas, L. Y., … Filevich, E. …, Koß, C., …, Peters, C., …, Zylberberg, A.',
         journal: 'Nature Human Behaviour',
         year: '2020',
-        link_journal: 'https://www.nature.com/articles/s41562-019-0813-1'
+        link_journal: 'https://www.nature.com/articles/s41562-019-0813-1',
+        link_pdf: 'pdfs_articles/The confidence database.pdf'
     },
-    {id: 15,
+    {
+        id: 15,
         title: 'I know that I know nothing: Cortical thickness and functional connectivity underlying meta-ignorance ability in pre-schoolers',
         authors: 'Filevich, E., Forlim, C. G., Fehrman, C., Forster, C., Paulus, M., Shing, Y. L., & Kühn, S.',
         journal: 'Developmental Cognitive Neuroscience',
         year: '2020',
-        link_journal: 'https://doi.org/10.1016/j.dcn.2019.100738'
+        link_journal: 'https://doi.org/10.1016/j.dcn.2019.100738',
+        link_pdf: 'pdfs_articles/I know that I know nothing- Cortical thickness and functional connectivity underlying meta-ignorance ability in pre-schoolers.pdf'
     },
-    {id: 14,
+    {
+        id: 14,
         title: 'Identifying predictors of within-person variance in MRI-based brain volume estimates',
         authors: 'Karch, J. D., Filevich, E., Wenger, E., Lisofsky, N., Becker, M., Butler, O., … Kühn, S.',
         journal: 'NeuroImage',
         year: '2019',
-        link_journal: 'https://www.sciencedirect.com/science/article/pii/S1053811919304227'
+        link_journal: 'https://www.sciencedirect.com/science/article/pii/S1053811919304227',
+        link_pdf: 'pdfs_articles/Identifying predictors of within-person variance in MRI-based brain volume estimates.pdf'
     },
-    {id: 13,
-        title: 'Within-Person Adaptivity in Frugal Judgments from Memory',
+    {
+        id: 13,
+        title: 'Within-person adaptivity in frugal judgments from memory',
         authors: 'Filevich, E.*, Horn, S.*, Kühn, S.',
         journal: 'Psychological Research',
         year: '2017',
-        link_journal: 'https://tinyurl.com/y9ab34nb'
+        link_journal: 'https://tinyurl.com/y9ab34nb',
+        link_pdf: 'pdfs_articles/Within-Person Adaptivity in Frugal Judgments from Memory.pdf'
     },
-    {id: 12,
+    {
+        id: 12,
         title: 'Behavioural, modeling, and electrophysiological evidence for domain-generality in human metacognition',
         authors: 'Faivre, N., Filevich, E., Solovey, G., Kühn, S., Blanke, O.',
         journal: 'The Journal of Neuroscience',
         year: '2017',
-        link_journal: 'http://www.jneurosci.org/content/38/2/263'
+        link_journal: 'http://www.jneurosci.org/content/38/2/263',
+        link_pdf: 'pdfs_articles/Behavioral, Modeling, and Electrophysiological Evidence for Supramodality in Human Metacognition.pdf'
     },
-    {id: 11,
+    {
+        id: 11,
         title: 'Day2day: Investigating daily variability of magnetic resonance imaging measures over half a year',
         authors: 'Filevich, E.*, Lisofsky, N.*, Becker, M., Butler, O., Lochstet, M., Martensson, J., Wenger, E., Lindenberger, U., Kühn. S.',
         journal: 'BMC Neuroscience',
         year: '2017',
-        link_journal: 'http://rdcu.be/vgEM'
+        link_journal: 'http://rdcu.be/vgEM',
+        link_pdf: 'pdfs_articles/Day2day- investigating daily variability of magnetic resonance imaging measures over half a year.pdf'
     },
-    {id: 10,
+    {
+        id: 10,
         title: 'Resting-state fMRI correlations: from link-wise unreliability to whole brain stability',
         authors: 'Pannunzi, M., Hindriks, R., Bettinardi, R. G., Wenger, E., Lisofsky, N., Martensson, J., Butler, O., Filevich, E., Becker, M., Lochstet, M., Kühn S., Deco, G.',
         journal: 'Neuroimage',
         year: '2017',
-        link_journal: 'https://www.ncbi.nlm.nih.gov/pubmed/28599964'
+        link_journal: 'https://www.ncbi.nlm.nih.gov/pubmed/28599964',
+        link_pdf: 'pdfs_articles/Resting-state fMRI correlations- from link-wise unreliability to whole brain stability.pdf'
     },
-    {id: 9,
+    {
+        id: 9,
         title: 'Seeing double: Exploring the phenomenology of self-reported absence of rivalry in bistable pictures',
         authors: 'Filevich, E., Becker, M., Wu, YH. & Kühn, S.',
         journal: 'Frontiers in Human Neuroscience',
         year: '2017',
-        link_journal: 'http://journal.frontiersin.org/article/10.3389/fnhum.2017.00301/full'
+        link_journal: 'http://journal.frontiersin.org/article/10.3389/fnhum.2017.00301/full',
+        link_pdf: 'pdfs_articles/Seeing Double: Exploring the Phenomenology of Self-Reported Absence of Rivalry in Bistable Pictures.pdf'
     },
-    {id: 8,
+    {
+        id: 8,
         title: 'Just another tool for online studies” (JATOS): An easy solution for setup and management of web servers supporting online studies',
         authors: 'Lange, K., Kühn, S., Filevich, E.',
         journal: 'PLoS one',
         year: '2015',
-        link_journal: 'http://journals.plos.org/plosone/article?id=10.1371/journal.pone.0130834'
+        link_journal: 'http://journals.plos.org/plosone/article?id=10.1371/journal.pone.0130834',
+        link_pdf: 'pdfs_articles/Just Another Tool for Online Studies (JATOS)- An Easy Solution for Setup and Management of Web Servers Supporting Online Studies.pdf'
     },
-    {id: 7,
+    {
+        id: 7,
         title: 'Metacognitive mechanisms underlying lucid dreaming',
         authors: 'Filevich, E., Dresler, M., Brick, T. R., & Kühn, S.',
         journal: 'The Journal of Neuroscience',
         year: '2015',
-        link_journal: 'http://www.jneurosci.org/content/35/3/1082.short'
+        link_journal: 'http://www.jneurosci.org/content/35/3/1082.short',
+        link_pdf: 'pdfs_articles/Metacognitive mechanisms underlying lucid dreaming.pdf'
     },
-    {id: 6,
+    {
+        id: 6,
         title: 'Brain correlates of subjective freedom of choice',
         authors: 'Filevich, E., Vanneste, P., Brass, M., Fias, W., Haggard, P. Kühn, S.',
         journal: 'Consciousness and Cognition',
         year: '2013',
-        link_journal: 'http://www.sciencedirect.com/science/article/pii/S1053810013001244'
+        link_journal: 'http://www.sciencedirect.com/science/article/pii/S1053810013001244',
+        link_pdf: 'pdfs_articles/Brain correlates of subjective freedom of choice.pdf'
     },
-    {id: 5,
+    {
+        id: 5,
         title: 'Persistence of internal representations of alternative voluntary actions',
         authors: 'Filevich, E., Haggard, P.',
         journal: 'Frontiers in Cognition',
         year: '2013',
-        link_journal: 'http://journal.frontiersin.org/article/10.3389/fpsyg.2013.00202/full'
+        link_journal: 'http://journal.frontiersin.org/article/10.3389/fpsyg.2013.00202/full',
+        link_pdf: 'pdfs_articles/Persistence of internal representations of alternative voluntary actions.pdf'
     },
-    {id: 4,
+    {
+        id: 4,
         title: 'There is no free won’t: Antecedent brain activity predicts decisions to inhibit',
         authors: 'Filevich, E., Kühn, S., Haggard, P.',
         journal: 'PLoS one',
         year: '2013',
-        link_journal: 'http://journals.plos.org/plosone/article?id=10.1371/journal.pone.0053053'
+        link_journal: 'http://journals.plos.org/plosone/article?id=10.1371/journal.pone.0053053',
+        link_pdf: 'pdfs_articles/There is no free won’t: Antecedent brain activity predicts decisions to inhibit.pdf'
     },
-    {id: 3,
+    {
+        id: 3,
         title: 'Grin and bear it! Neural consequences of a voluntary decision to act or inhibit action',
         authors: 'Filevich, E., Haggard, P.',
         journal: 'Experimental Brain Research',
         year: '2012',
-        link_journal: 'http://link.springer.com/article/10.1007/s00221-012-3263-9'
+        link_journal: 'http://link.springer.com/article/10.1007/s00221-012-3263-9',
+        link_pdf: 'pdfs_articles/grin and bear it - neural consequences of a voluntary decision to act or inhibit action.pdf'
     },
     {
         id: 2,
@@ -153,7 +202,8 @@ var allArticles = [
         authors: 'Filevich, E., Kühn, S., Haggard, P.',
         journal: 'Cortex',
         year: '2012',
-        link_journal: 'http://www.sciencedirect.com/science/article/pii/S0010945212001414'
+        link_journal: 'http://www.sciencedirect.com/science/article/pii/S0010945212001414',
+        link_pdf: 'pdfs_articles/Negative motor phenomena in cortical stimulation - implications for inhibitory control of human action.pdf'
     },
     {
         id: 1,
@@ -161,7 +211,8 @@ var allArticles = [
         authors: 'Filevich, E.*, Kühn, S.*, Haggard, P.',
         journal: 'Neuroscience and Biobehavioral Reviews, 36(4), 1107–1118',
         year: '2012',
-        link_journal: 'https://www.sciencedirect.com/science/article/abs/pii/S0149763412000152'
+        link_journal: 'https://www.sciencedirect.com/science/article/abs/pii/S0149763412000152',
+        link_pdf: 'pdfs_articles/intentional inhibition of human action - the power of no.pdf'
     }]
 
 
