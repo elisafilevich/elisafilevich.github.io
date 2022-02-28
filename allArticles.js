@@ -1,5 +1,13 @@
 var allArticles = [
     {
+        id: 25,
+        title: 'Metacognitive Improvement: Disentangling Adaptive Training From Experimental Confounds',
+        authors: 'Rouy, M., de Gardelle, V., Reyes, G., Sackur, J., Vergnaud, J. C., Filevich, E., & Faivre, N.',
+        journal: 'Journal of Experimental Psychology: General',
+        link_journal: 'http://dx.doi.org/10.1037/xge0001185',
+        link_pdf: 'pdfs_articles/Metacognitive Improvement- Disentangling Adaptive Training From Experimental Confounds.pdf'
+    },
+    {
         id: 24,
         title: 'Probing EEG activity in the targeted cortex after focal transcranial electrical stimulation',
         authors: 'Tashiro, S., Siebner, HR., Charalampaki, A, Göksu, C., Saturnino, GB, Thielscher, A., Tomasevic, L.',
