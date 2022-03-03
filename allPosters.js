@@ -1,5 +1,13 @@
 var allPosters = [
     {
+        id: 6,
+        title: 'The weighting of prior information in confidence',
+        authors: 'Constant, M., Filevich, E.',
+        journal: 'Mind, Brain, Body Symposium, MindBrainBody Institute.',
+        year: '2022',
+        link_journal: 'pdfs_posters/Constant_MBB22.pdf'
+    },
+    {
         id: 5,
         title: 'Do we rely on the outcome of our movements to know how we just moved?',
         authors: 'Charalampaki, A., Filevich, E.',
