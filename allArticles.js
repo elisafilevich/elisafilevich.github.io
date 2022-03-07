@@ -17,10 +17,10 @@ var allArticles = [
     },
     {
         id: 23,
-        title: 'Intact visual and tactile metacognition in adults with Tourette disorder',
+        title: 'No evidence for visual and tactile metacognition in adults with Tourette disorder',
         authors: 'Arbuzova, P., Guo, S., Koß, C., Kurvis, L., Faivre, N., Kühn, A., Filevich, E., Ganos, C.',
-        journal: '(Under Review)',
-        year: '2021',
+        journal: 'Parkinsonism & Related Disorders, In Press',
+        year: '2022',
         link_journal: '',
         link_pdf: 'pdfs_articles/'
     },
@@ -64,7 +64,7 @@ var allArticles = [
         id: 18,
         title: 'Measuring metacognition of direct and indirect parameters of voluntary movement',
         authors: 'Arbuzova, P., Peters, C., Roed, L., Koss, C., Maurer, H., Maurer, L. K., Mueller, H., Verrel, J., & Filevich, E.',
-        journal: 'JEP:G',
+        journal: 'Journal of Experimental Psychology: General',
         year: '2021',
         link_journal: 'https://psycnet.apa.org/record/2021-39818-001',
         link_pdf: 'pdfs_articles/Measuring Metacognition of Direct and Indirect Parameters of Voluntary Movement.pdf'
