@@ -1,6 +1,14 @@
 var allPosters = [
     {
         id: 6,
+        title: 'No evidence of impaired visual and tactile metacognition in adults with Tourette disorder',
+        authors: 'Arbuzova, P., Filevich, E.',
+        journal: 'Mind, Brain, Body Symposium, MindBrainBody Institute.',
+        year: '2022',
+        link_journal: 'pdfs_posters/Arbuzova_MBB22.pdf'
+    },
+    {
+        id: 6,
         title: 'The weighting of prior information in confidence',
         authors: 'Constant, M., Filevich, E.',
         journal: 'Mind, Brain, Body Symposium, MindBrainBody Institute.',
