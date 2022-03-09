@@ -21,7 +21,7 @@ var allArticles = [
         authors: 'Arbuzova, P., Guo, S., Koß, C., Kurvis, L., Faivre, N., Kühn, A., Filevich, E., Ganos, C.',
         journal: 'Parkinsonism & Related Disorders, In Press',
         year: '2022',
-        link_journal: '',
+        link_journal: 'https://www.prd-journal.com/article/S1353-8020(22)00052-9/fulltext',
         link_pdf: 'pdfs_articles/'
     },
     {
