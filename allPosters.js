@@ -1,9 +1,17 @@
 var allPosters = [
     {
-        id: 6,
+        id: 8,
+        title: 'Are experimental approaches to study the Sense of Agency comparable?',
+        authors: 'Charalampaki, A., Filevich, E.',
+        journal: 'Mind, Brain, Body Symposium, MindBrainBody Institute.',
+        year: '2022',
+        link_journal: 'pdfs_posters/Charalampaki_MBB2022.pdf'
+    },
+    {
+        id: 7,
         title: 'No evidence of impaired visual and tactile metacognition in adults with Tourette disorder',
         authors: 'Arbuzova, P., Filevich, E.',
-        journal: 'Mind, Brain, Body Symposium, MindBrainBody Institute.',
+        journal: 'Mind, Brain, Body Symposium, MindBrainBody Institute. *Won poster prize',
         year: '2022',
         link_journal: 'pdfs_posters/Arbuzova_MBB22.pdf'
     },
@@ -11,7 +19,7 @@ var allPosters = [
         id: 6,
         title: 'The weighting of prior information in confidence',
         authors: 'Constant, M., Filevich, E.',
-        journal: 'Mind, Brain, Body Symposium, MindBrainBody Institute.',
+        journal: 'Mind, Brain, Body Symposium, MindBrainBody Institute. *Won poster prize',
         year: '2022',
         link_journal: 'pdfs_posters/Constant_MBB22.pdf'
     },
@@ -19,7 +27,7 @@ var allPosters = [
         id: 5,
         title: 'Do we rely on the outcome of our movements to know how we just moved?',
         authors: 'Charalampaki, A., Filevich, E.',
-        journal: 'Mind, Brain, Body Symposium, MindBrainBody Institute.',
+        journal: 'Mind, Brain, Body Symposium, MindBrainBody Institute. *Won poster prize',
         year: '2021',
         link_journal: 'pdfs_posters/Charalampaki_MBB20.pdf'
     },
