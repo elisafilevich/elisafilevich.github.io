@@ -1,5 +1,13 @@
 var allArticles = [
     {
+        id: 26,
+        title: 'Sense of agency as synecdoche: Multiple neurobiological mechanisms may underlie the phenomenon summarized as sense of agency',
+        authors: 'Charalampaki, A., Karabanov, AN., Ritterband-Rosenbaum A., Nielsen, Siebner HR., Christensen MS.,',
+        journal: 'Consciousness and Cognition',
+        link_journal: 'https://doi.org/10.1016/j.concog.2022.103307',
+        link_pdf: 'pdfs_articles/Sense of agency as synecdoche - Multiple neurobiological mechanisms may underlie the phenomenon summarized as sense of agency.pdf'
+    },
+    {
         id: 25,
         title: 'Metacognitive Improvement: Disentangling Adaptive Training From Experimental Confounds',
         authors: 'Rouy, M., de Gardelle, V., Reyes, G., Sackur, J., Vergnaud, J. C., Filevich, E., & Faivre, N.',
