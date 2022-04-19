@@ -3,6 +3,7 @@ var allArticles = [
         id: 26,
         title: 'Sense of agency as synecdoche: Multiple neurobiological mechanisms may underlie the phenomenon summarized as sense of agency',
         authors: 'Charalampaki, A., Karabanov, AN., Ritterband-Rosenbaum A., Nielsen, Siebner HR., Christensen MS.,',
+        year: '2022',
         journal: 'Consciousness and Cognition',
         link_journal: 'https://doi.org/10.1016/j.concog.2022.103307',
         link_pdf: 'pdfs_articles/Sense of agency as synecdoche - Multiple neurobiological mechanisms may underlie the phenomenon summarized as sense of agency.pdf'
@@ -11,6 +12,7 @@ var allArticles = [
         id: 25,
         title: 'Metacognitive Improvement: Disentangling Adaptive Training From Experimental Confounds',
         authors: 'Rouy, M., de Gardelle, V., Reyes, G., Sackur, J., Vergnaud, J. C., Filevich, E., & Faivre, N.',
+        year: '2022',
         journal: 'Journal of Experimental Psychology: General',
         link_journal: 'http://dx.doi.org/10.1037/xge0001185',
         link_pdf: 'pdfs_articles/Metacognitive Improvement- Disentangling Adaptive Training From Experimental Confounds.pdf'
@@ -19,6 +21,7 @@ var allArticles = [
         id: 24,
         title: 'Probing EEG activity in the targeted cortex after focal transcranial electrical stimulation',
         authors: 'Tashiro, S., Siebner, HR., Charalampaki, A, Göksu, C., Saturnino, GB, Thielscher, A., Tomasevic, L.',
+        year: '2020',
         journal: 'Brain Stimulation',
         link_journal: 'https://www.sciencedirect.com/science/article/pii/S1935861X20300371',
         link_pdf: 'pdfs_articles/Probing EEG activity in the targeted cortex after focal transcranial electrical stimulation.pdf'
