@@ -1,5 +1,13 @@
 var allArticles = [
     {
+        id: 27,
+        title: 'Motor outcomes congruent with intentions may sharpen metacognitive representations',
+        authors: 'Charalampaki, A., Peters, C., Maurer, H., Maurer, LK., Müller, H., Verrel, J., Filevich, E.',
+        year: '2022',
+        journal: 'BioRXiv (Under Review)',
+        link_journal: 'https://www.biorxiv.org/content/10.1101/2022.04.19.488801v1',
+        link_pdf: 'pdfs_articles/Motor outcomes congruent with intentions may sharpen metacognitive representations.pdf'
+    },{
         id: 26,
         title: 'Sense of agency as synecdoche: Multiple neurobiological mechanisms may underlie the phenomenon summarized as sense of agency',
         authors: 'Charalampaki, A., Karabanov, AN., Ritterband-Rosenbaum A., Nielsen, Siebner HR., Christensen MS.,',
@@ -30,10 +38,10 @@ var allArticles = [
         id: 23,
         title: 'No evidence for visual and tactile metacognition in adults with Tourette disorder',
         authors: 'Arbuzova, P., Guo, S., Koß, C., Kurvis, L., Faivre, N., Kühn, A., Filevich, E., Ganos, C.',
-        journal: 'Parkinsonism & Related Disorders, In Press',
+        journal: 'Parkinsonism & Related Disorders',
         year: '2022',
         link_journal: 'https://www.prd-journal.com/article/S1353-8020(22)00052-9/fulltext',
-        link_pdf: 'pdfs_articles/'
+        link_pdf: 'pdfs_articles/No evidence of impaired visual and tactile metacognition in adults with tourette disorder.pdf'
     },
     {
         id: 22,
