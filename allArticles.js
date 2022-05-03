@@ -67,7 +67,7 @@ var allArticles = [
         authors: 'Rahnev, D., Balsdon, T., Charles, L., de Gardelle, V., Denison, R. N., Desender, K., …, Filevich, E., … Zylberberg, A.',
         journal: 'Perspectives on Psychological Science',
         year: '2022 - In Press',
-        link_journal: '',
+        link_journal: 'https://psyarxiv.com/z8v5x/',
         link_pdf: 'pdfs_articles/Consensus goals for the field of visual metacognition.pdf'
     },
     {
