@@ -20,38 +20,16 @@
   <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
 
   <script type='text/javascript' src='allArticles.js'></script>
-    <script type='text/javascript' src='allChapters.js'></script>
-    <!-- <script src="//cdnjs.cloudflare.com/ajax/libs/list.js/1.5.0/list.min.js"></script> -->
-    <script type='text/javascript' src='assets/js/list.min.js'></script>
-    <link href="assets/css/list.css" rel="stylesheet">
-</head>
+  <script type='text/javascript' src='allChapters.js'></script>
+  <!-- <script src="//cdnjs.cloudflare.com/ajax/libs/list.js/1.5.0/list.min.js"></script> -->
+  <script type='text/javascript' src='assets/js/list.min.js'></script>
+  <link href="assets/css/list.css" rel="stylesheet">
+  <script src="components/header.js" type="text/javascript" defer></script>
+  <script src="components/footer.js" type="text/javascript" defer></script>
 
 <body>
-  <!-- Static navbar -->
-  <div class="navbar navbar-inverse navbar-static-top">
-    <div class="container">
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-        <a class="navbar-brand" href="index.html">METAMOTOR LAB</a>
-      </div>
-      <div class="navbar-collapse collapse">
-        <ul class="nav navbar-nav navbar-right">
-          <li><a href="research.html">Research</a></li>
-          <li><a href="availableTestingSlots.html">Participate!</a></li>
-          <li><a href="publications.html">Publications</a></li>
-          <li><a href="talks.html">Talks</a></li>
-          <li><a href="people.html">People</a></li>
-          <li><a href="jobDescription.html">Join us</a></li>
-          <li><a href="funding.html">Funding</a></li>
-        </ul>
-      </div>
-      <!--/.nav-collapse -->
-    </div>
-  </div>
+  <header-component></header-component>
+
 
 
   <!-- +++++ Projects Section +++++ -->
@@ -74,76 +52,46 @@
     <p><b><a href="https://scholar.google.com/citations?user=J4UQguUAAAAJ&hl=en">Google Scholar Profile</a></b>, <b><a
           href="https://orcid.org/0000-0002-1158-8220">ORCID</a></b></p>
 
-          <p><br><b>Journal Articles</b></p>
+    <p><br><b>Journal Articles</b></p>
 
-          <div id="papers">
-              <input class="search" placeholder="Search" />
-              <ul class="list"></ul>
-          </div>
-  
-      <p><br><b>Book Chapters</b></p>
-  
-          <div id="chapters">
-              <input class="search" placeholder="Search" />
-              <ul class="list"></ul>
-          </div>
-  
+    <div id="papers">
+      <input class="search" placeholder="Search" />
+      <ul class="list"></ul>
+    </div>
+
+    <p><br><b>Book Chapters</b></p>
+
+    <div id="chapters">
+      <input class="search" placeholder="Search" />
+      <ul class="list"></ul>
+    </div>
+
   </div><!-- /container -->
 
 
   <!-- +++++ Footer Section +++++ -->
-
-  <div id="footer">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-4">
-          <h4>Find us</h4>
-          <p>
-            Humboldt-Universitaet zu Berlin<br />
-            Bernstein Center for Computational Neuroscience<br />
-            Philippstr. 13 (Haus 6)
-            <br />Raum 203<br />
-            10115 Berlin, Germany<br />
-            +49 (0) 30 2093 6313
-          </p>
-        </div><!-- /col-lg-4 -->
-
-        <div class="col-lg-4">
-          <h4>Email</h4>
-          <p>elisa.filevich@bccn-berlin.de</p><br />
-        </div><!-- /col-lg-4 -->
-
-        <div class="col-lg-4">
-          <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d515.3369281074251!2d13.381965338409904!3d52.52591332602748!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xaf002105436346da!2sBernstein+Center+for+Computational+Neuroscience+Berlin!5e0!3m2!1sen!2sde!4v1540062493261"
-            width="300" height="225" frameborder="0" style="border:0" allowfullscreen></iframe>
-        </div><!-- /col-lg-4 -->
-      </div>
-
-    </div>
-  </div>
-
+  <footer-component></footer-component>
 
   <!-- Bootstrap core JavaScript
-      ================================================== -->
+   ================================================== -->
   <!-- Placed at the end of the document so the pages load faster -->
   <script src="assets/js/bootstrap.min.js"></script>
 </body>
-
+</head>
 
 
 <script>
-var options = {
-        valueNames: [
-            'title',
-            'year',
-            'authors',
-            'journal',
-            { data: ['id'] },
-            { attr: 'href', name: 'link_journal' },
-            { attr: 'href', name: 'link_pdf' },
-        ],
-        item: `<li>
+  var options = {
+    valueNames: [
+      'title',
+      'year',
+      'authors',
+      'journal',
+      { data: ['id'] },
+      { attr: 'href', name: 'link_journal' },
+      { attr: 'href', name: 'link_pdf' },
+    ],
+    item: `<li>
             <p class="title"> </p>
             <p class="authors"> </p>
             <p class="year"> </p>
@@ -151,20 +99,20 @@ var options = {
             <a class="link_journal" href> Article link </a><br>
             <a class="link_pdf" href> PDF </a>
             </li>`
-    };
+  };
 
   var paperList = new List('papers', options);
   for (let p = 0; p < allArticles.length; p++) {
-      if (allArticles[p].authors.includes("Filevich")) {
-          paperList.add(allArticles[p]);
-      }
+    if (allArticles[p].authors.includes("Filevich")) {
+      paperList.add(allArticles[p]);
+    }
   }
 
   var chapterList = new List('chapters', options);
   for (let p = 0; p < allArticles.length; p++) {
-      if (allChapters[p].authors.includes("Filevich")) {
-          chapterList.add(allChapters[p]);
-      }
+    if (allChapters[p].authors.includes("Filevich")) {
+      chapterList.add(allChapters[p]);
+    }
   }
 </script>
 
