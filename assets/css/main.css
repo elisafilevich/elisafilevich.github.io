@@ -25,6 +25,12 @@ body {
 	min-height: 75vh;
   }
 
+  .abstract {
+	width: 75%;
+	text-align: justify;
+	text-justify: inter-word;  
+  }
+
 
 /* Titles */
 h1, h2, h3, h4, h5, h6 {
