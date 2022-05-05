@@ -6,7 +6,7 @@ var allArticles = [
         year: '2022',
         journal: 'BioRXiv (Under Review)',
         link_journal: 'https://www.biorxiv.org/content/10.1101/2022.05.03.490468v1',
-        link_pdf: 'pdfs_articles/Motor outcomes congruent with intentions may sharpen metacognitive representations.pdf'
+        link_pdf: 'pdfs_articles/Metacognitive domains are not aligned along a dimension of internal-external information source.pdf'
     },
     {
         id: 27,
