@@ -1,6 +1,13 @@
 var allArticles = [
-
-    
+    {
+        id: 29,
+        title: 'Consensus Goals in the Field of Visual Metacognition.',
+        authors: 'Rahnev D, Balsdon T, Charles L, … Filevich, E., …, et al.',
+        year: '2022',
+        journal: 'Perspectives on Psychological Science',
+        link_journal: 'https://journals.sagepub.com/doi/10.1177/17456916221075615',
+        link_pdf: 'pdfs_articles/Consensus Goals in the Field of Visual Metacognition.pdf'
+    },
     {
         id: 28,
         title: 'Do I look like I\'m sure?: Partial metacognitive access to the low-level aspects of one\'s own facial expressions',
@@ -8,7 +15,7 @@ var allArticles = [
         year: '2022',
         journal: 'Cognition',
         link_journal: 'https://www.sciencedirect.com/science/article/pii/S0010027722001433',
-        link_pdf: 'pdfs_articles/Do I look like I’m sure-Partial metacognitive access to the low-level aspects of one’s own facial expressions'
+        link_pdf: 'pdfs_articles/Do I look like Im sure-Partial metacognitive access to the low-level aspects of ones own facial expressions.pdf'
     },
     {
         id: 27,
