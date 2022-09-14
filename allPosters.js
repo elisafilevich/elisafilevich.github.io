@@ -1,5 +1,12 @@
 var allPosters = [
     {
+        id: 9,
+        title: 'Metacognitive domains do not groupbased on internal vs. external sources of information',
+        authors: 'Arbuzova, P., Filevich, E.',
+        journal: 'ASSC 25, Amsterdam, Netherlands',
+        year: '2022',
+        link_journal: 'pdfs_posters/Arbuzova_ASSC25.pdf'
+    },{
         id: 8,
         title: 'Are experimental approaches to study the Sense of Agency comparable?',
         authors: 'Charalampaki, A., Filevich, E.',
