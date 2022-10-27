@@ -1,5 +1,14 @@
 var allArticles = [
     {
+        id: 30,
+        title: 'Prior information differentially affects discrimination decisions and subjective confidence reports',
+        authors: 'Constant, M., Pereira, M., Faivre, N., & Filevich, E.',
+        year: '2022',
+        journal: 'BioRXiv',
+        link_journal: 'https://www.biorxiv.org/content/10.1101/2022.10.26.513829v1',
+        link_pdf: 'pdfs_articles/Prior information differentially affects discrimination decisions and subjective confidence reports.pdf'
+    },
+    {
         id: 29,
         title: 'Consensus Goals in the Field of Visual Metacognition.',
         authors: 'Rahnev D, Balsdon T, Charles L, … Filevich, E., …, et al.',
