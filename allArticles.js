@@ -1,4 +1,12 @@
 var allArticles = [
+    {id:31,
+        title: 'Metacognitive domains are not aligned along a dimension of internal-external information source',
+        authors: 'Arbuzova, P., Maurer, L.K. & Filevich, E.',
+        year: '2022',
+        journal: 'Psychon Bull Rev',
+        link_journal: 'https://doi.org/10.3758/s13423-022-02201-1',
+        link_pdf: 'pdfs_articles/Metacognitive domains are not aligned along a dimension of internal-external information source.pdf'
+    },
     {
         id: 30,
         title: 'Prior information differentially affects discrimination decisions and subjective confidence reports',
@@ -43,7 +51,7 @@ var allArticles = [
         journal: 'BioRXiv (Under Review)',
         link_journal: 'https://www.biorxiv.org/content/10.1101/2022.04.19.488801v1',
         link_pdf: 'pdfs_articles/Motor outcomes congruent with intentions may sharpen metacognitive representations.pdf'
-    },{
+    }, {
         id: 25,
         title: 'Sense of agency as synecdoche: Multiple neurobiological mechanisms may underlie the phenomenon summarized as sense of agency',
         authors: 'Charalampaki, A., Karabanov, AN., Ritterband-Rosenbaum A., Nielsen, Siebner HR., Christensen MS.,',
