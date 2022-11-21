@@ -1,5 +1,5 @@
 var allArticles = [
-    {id:31,
+    {id:30,
         title: 'Metacognitive domains are not aligned along a dimension of internal-external information source',
         authors: 'Arbuzova, P., Maurer, L.K. & Filevich, E.',
         year: '2022',
@@ -8,7 +8,7 @@ var allArticles = [
         link_pdf: 'pdfs_articles/Metacognitive domains are not aligned along a dimension of internal-external information source.pdf'
     },
     {
-        id: 30,
+        id: 29,
         title: 'Prior information differentially affects discrimination decisions and subjective confidence reports',
         authors: 'Constant, M., Pereira, M., Faivre, N., & Filevich, E.',
         year: '2022',
@@ -17,7 +17,7 @@ var allArticles = [
         link_pdf: 'pdfs_articles/Prior information differentially affects discrimination decisions and subjective confidence reports.pdf'
     },
     {
-        id: 29,
+        id: 28,
         title: 'Consensus Goals in the Field of Visual Metacognition.',
         authors: 'Rahnev D, Balsdon T, Charles L, … Filevich, E., …, et al.',
         year: '2022',
@@ -26,22 +26,13 @@ var allArticles = [
         link_pdf: 'pdfs_articles/Consensus Goals in the Field of Visual Metacognition.pdf'
     },
     {
-        id: 28,
+        id: 27,
         title: 'Do I look like I\'m sure?: Partial metacognitive access to the low-level aspects of one\'s own facial expressions',
         authors: 'Ciston, AB.*, Forster, C.*, Brick, TR., Kühn, S., Verrel, J., Filevich, E.',
         year: '2022',
         journal: 'Cognition',
         link_journal: 'https://www.sciencedirect.com/science/article/pii/S0010027722001433',
         link_pdf: 'pdfs_articles/Do I look like Im sure-Partial metacognitive access to the low-level aspects of ones own facial expressions.pdf'
-    },
-    {
-        id: 27,
-        title: 'Metacognitive domains are not aligned along a dimension of internal-external information source',
-        authors: 'Arbuzova, P., Maurer, L. K., & Filevich, E.',
-        year: '2022',
-        journal: 'BioRXiv (Under Review)',
-        link_journal: 'https://www.biorxiv.org/content/10.1101/2022.05.03.490468v1',
-        link_pdf: 'pdfs_articles/Metacognitive domains are not aligned along a dimension of internal-external information source.pdf'
     },
     {
         id: 26,
