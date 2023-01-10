@@ -1,7 +1,7 @@
 var allArticles = [
     {id:31,
         title: 'Impaired Metacognition of Voluntary Movement in Functional Movement Disorder',
-        authors: 'Verrel, J., Chwolka, F., Filevich, E., Moyé, J., Paulus T., Zittel S.,Bäumer T., Münchau A., Weissbach A.',
+        authors: 'Verrel, J., Chwolka, F., Filevich, E., Moyé, J., Paulus T., Zittel S., Bäumer T., Münchau A., Weissbach A.',
         year: '2023',
         journal: 'Movement Disorders',
         link_journal: 'https://movementdisorders.onlinelibrary.wiley.com/doi/10.1002/mds.29303',
@@ -94,15 +94,6 @@ var allArticles = [
         year: '2022',
         link_journal: 'https://elifesciences.org/articles/72356',
         link_pdf: 'pdfs_articles/Judgments of agency are affected by sensory noise without recruiting metacognitive processing.pdf'
-    },
-    {
-        id: 20,
-        title: 'Consensus goals for the field of visual metacognition',
-        authors: 'Rahnev, D., Balsdon, T., Charles, L., de Gardelle, V., Denison, R. N., Desender, K., …, Filevich, E., … Zylberberg, A.',
-        journal: 'Perspectives on Psychological Science',
-        year: '2022 - In Press',
-        link_journal: 'https://psyarxiv.com/z8v5x/',
-        link_pdf: 'pdfs_articles/Consensus goals for the field of visual metacognition.pdf'
     },
     {
         id: 19,
