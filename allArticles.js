@@ -1,5 +1,15 @@
 var allArticles = [
-    {id:31,
+    {
+        id: 26,
+        title: 'Motor outcomes congruent with intentions may sharpen metacognitive representations',
+        authors: 'Charalampaki, A., Peters, C., Maurer, H., Maurer, LK., Müller, H., Verrel, J., Filevich, E.',
+        year: '2023',
+        journal: 'Cognition',
+        link_journal: 'https://www.sciencedirect.com/science/article/pii/S0010027723000227',
+        link_pdf: 'pdfs_articles/Motor outcomes congruent with intentions may sharpen metacognitive representations.pdf'
+    }, 
+    {
+        id:31,
         title: 'Impaired Metacognition of Voluntary Movement in Functional Movement Disorder',
         authors: 'Verrel, J., Chwolka, F., Filevich, E., Moyé, J., Paulus T., Zittel S., Bäumer T., Münchau A., Weissbach A.',
         year: '2023',
@@ -43,14 +53,6 @@ var allArticles = [
         link_pdf: 'pdfs_articles/Do I look like Im sure-Partial metacognitive access to the low-level aspects of ones own facial expressions.pdf'
     },
     {
-        id: 26,
-        title: 'Motor outcomes congruent with intentions may sharpen metacognitive representations',
-        authors: 'Charalampaki, A., Peters, C., Maurer, H., Maurer, LK., Müller, H., Verrel, J., Filevich, E.',
-        year: '2023',
-        journal: 'Cognition',
-        link_journal: 'https://www.sciencedirect.com/science/article/pii/S0010027723000227',
-        link_pdf: 'pdfs_articles/Motor outcomes congruent with intentions may sharpen metacognitive representations.pdf'
-    }, {
         id: 25,
         title: 'Sense of agency as synecdoche: Multiple neurobiological mechanisms may underlie the phenomenon summarized as sense of agency',
         authors: 'Charalampaki, A., Karabanov, AN., Ritterband-Rosenbaum A., Nielsen, Siebner HR., Christensen MS.,',
