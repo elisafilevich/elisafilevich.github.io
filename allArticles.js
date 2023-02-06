@@ -46,9 +46,9 @@ var allArticles = [
         id: 26,
         title: 'Motor outcomes congruent with intentions may sharpen metacognitive representations',
         authors: 'Charalampaki, A., Peters, C., Maurer, H., Maurer, LK., Müller, H., Verrel, J., Filevich, E.',
-        year: '2022',
-        journal: 'BioRXiv (Under Review)',
-        link_journal: 'https://www.biorxiv.org/content/10.1101/2022.04.19.488801v1',
+        year: '2023',
+        journal: 'Cognition',
+        link_journal: 'https://www.sciencedirect.com/science/article/pii/S0010027723000227',
         link_pdf: 'pdfs_articles/Motor outcomes congruent with intentions may sharpen metacognitive representations.pdf'
     }, {
         id: 25,
