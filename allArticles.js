@@ -10,7 +10,7 @@ var allArticles = [
     }, 
     {
         id:31,
-        title: 'Impaired Metacognition of Voluntary Movement in Functional Movement Disorder',
+        title: 'Impaired metacognition of voluntary movement in functional movement disorder',
         authors: 'Verrel, J., Chwolka, F., Filevich, E., Moyé, J., Paulus T., Zittel S., Bäumer T., Münchau A., Weissbach A.',
         year: '2023',
         journal: 'Movement Disorders',
