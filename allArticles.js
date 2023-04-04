@@ -1,5 +1,13 @@
 var allArticles = [
     {
+        id: 0,
+        title: 'Exogenous and endogenous sources of uncertainty inform global performance monitoring',
+        authors: 'Chancel, M., Filevich, E., Faivre, N.',
+        year: '2023',
+        journal: 'PsyArXiv',
+        link_journal: 'https://psyarxiv.com/gbjy5/',
+        link_pdf: 'pdfs_articles/Exogenous and endogenous sources of uncertainty inform global performance monitoring.pdf'
+    },{
         id: 26,
         title: 'Motor outcomes congruent with intentions may sharpen metacognitive representations',
         authors: 'Charalampaki, A., Peters, C., Maurer, H., Maurer, LK., Müller, H., Verrel, J., Filevich, E.',
