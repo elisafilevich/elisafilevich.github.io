@@ -1,6 +1,13 @@
 var allPosters = [
     {
         id: 9,
+        title: 'Metacognition of agency: An EEG study',
+        authors: 'Charalampaki, A., Filevich, E.',
+        journal: 'Mind, Brain, Body Symposium, MindBrainBody Institute. Berlin',
+        year: '2023',
+        link_journal: 'pdfs_posters/Charalampaki_MBB2023.pdf'
+    }, {
+        id: 9,
         title: 'Metacognitive domains do not groupbased on internal vs. external sources of information',
         authors: 'Arbuzova, P., Filevich, E.',
         journal: 'ASSC 25, Amsterdam, Netherlands',
