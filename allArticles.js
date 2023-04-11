@@ -1,6 +1,14 @@
 var allArticles = [
     {
         id: 0,
+        title: 'Brain-constrained neural modeling explains fast mapping of words to meaning',
+        authors: 'Constant, M., Pulvermüller, F., Tomasello, R.',
+        year: '2023',
+        journal: 'Cerebral Cortex',
+        link_journal: 'https://doi.org/10.1093/cercor/bhad007',
+        link_pdf: 'pdfs_articles/Brain-constrained neural modeling explains fast mapping of words to meaning.pdf'
+    },{
+        id: 0,
         title: 'Exogenous and endogenous sources of uncertainty inform global performance monitoring',
         authors: 'Chancel, M., Filevich, E., Faivre, N.',
         year: '2023',
