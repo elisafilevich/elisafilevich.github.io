@@ -21,6 +21,10 @@
   <link href="assets/css/main.css" rel="stylesheet">
 
   <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+  <script type='text/javascript' src='allArticles.js'></script>
+  <script type='text/javascript' src='assets/js/list.min.js'></script>
+  <link href="assets/css/list.css" rel="stylesheet">
+
   <script src="components/header.js" type="text/javascript" defer></script>
   <script src="components/footer.js" type="text/javascript" defer></script>
 
@@ -39,20 +43,19 @@
     <div>
       <p>We communicate a lot with subtle facial expressions. But we normally don't see ourselves while we're making
         them. So we wondered how much we know, about the way we look when we make facial expressions.
-        <br><br>It turns out, we don't know much! See our <a
-          href="https://www.biorxiv.org/content/10.1101/2021.03.08.434069v1">preprint</a> and a <a
-          href="https://twitter.com/elifilevich/status/1369964865444601860">twitter thread</a>.
+        <br><br>It turns out, we don't know much! See a <a
+          href="https://twitter.com/elifilevich/status/1369964865444601860">twitter thread</a> or the paper below.
         <br>
         We collaborate with <a href="https://www.mpib-berlin.mpg.de/en/staff/julius-verrel">Julius Verrel</a> for this
         project.
       </p>
-
+      <br>
       <p><b>Publications</b></p>
-      <p>Ciston, AB.*, Forster, C.*, Brick, TR., Kühn, S., Verrel, J., Filevich, E.
-        (2021) Limited metacognitive access to one’s own facial expressions. <b><i>Under Review</i></b>
-        <a href="https://www.biorxiv.org/content/10.1101/2021.03.08.434069v1">[BioRxiv]</a>
-      </p>
-      </p>
+      
+      <div id="papers">
+        <input class="search" placeholder="Search" />
+        <ul class="list"></ul>
+      </div>
 
     </div>
 
@@ -75,5 +78,37 @@
   <script src="assets/js/bootstrap.min.js"></script>
 </body>
 </head>
+
+
+<script>
+  var options = {
+    valueNames: [
+      'title',
+      'year',
+      'authors',
+      'journal',
+      { data: ['id'] },
+      { attr: 'href', name: 'link_journal' },
+      { attr: 'href', name: 'link_pdf' },
+    ],
+    item: `<li>
+            <p class="title"> </p>
+            <p class="authors"> </p>
+            <p class="year"> </p>
+            <p class="journal"> </p>
+            <a class="link_journal" href> Article link </a><br>
+            <a class="link_pdf" href> PDF </a>
+            </li>`
+  };
+
+  var paperList = new List('papers', options);
+  for (let p = 0; p < allArticles.length; p++) {
+    if (allArticles[p].title.includes("facial")) {
+      paperList.add(allArticles[p]);
+    }
+  }
+
+ 
+</script>
 
 </html>
