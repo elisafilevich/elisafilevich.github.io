@@ -10,22 +10,21 @@ class Footer extends HTMLElement {
       <div class="col-lg-4">
         <h4>Find us</h4>
         <p>
-          Humboldt-Universitaet zu Berlin<br/>
-          Bernstein Center for Computational Neuroscience<br/>
-          Philippstr. 13 (Haus 6)
-          <br/>Raum 203<br/>
-          10115 Berlin, Germany<br/>
-          +49 (0) 30 2093 6313
+        Hector Research Institute of Education Sciences and Psychology <br/>
+          University of Tübingen<br/>
+          Europastraße 6 <br/>
+          72072 Tübingen, Germany<br/>
+          +49 (0) 7071 29-75649
         </p>
       </div><!-- /col-lg-4 -->
       
       <div class="col-lg-4">
         <h4>Email</h4>
-        <p>elisa.filevich@bccn-berlin.de</p><br/>
+        <p>elisa.filevich@uni-tuebingen.de</p><br/>
       </div><!-- /col-lg-4 -->
 
       <div class="col-lg-4">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d515.3369281074251!2d13.381965338409904!3d52.52591332602748!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xaf002105436346da!2sBernstein+Center+for+Computational+Neuroscience+Berlin!5e0!3m2!1sen!2sde!4v1540062493261" width="300" height="225" frameborder="0" style="border:0" allowfullscreen></iframe>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2642.8237457919895!2d9.053511012671931!3d48.51744337116828!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4799fad16d1fc8c1%3A0x6cad6723574dcb05!2sEuropastra%C3%9Fe%206%2C%2072072%20T%C3%BCbingen!5e0!3m2!1sen!2sde!4v1682192701793!5m2!1sen!2sde" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
       </div><!-- /col-lg-4 -->
     </div>
     
