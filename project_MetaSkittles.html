@@ -21,6 +21,13 @@
   <link href="assets/css/main.css" rel="stylesheet">
 
   <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+  <script type='text/javascript' src='allArticles.js'></script>
+  <script type='text/javascript' src='allPosters.js'></script>
+  <script type='text/javascript' src='assets/js/list.min.js'></script>
+  <link href="assets/css/list.css" rel="stylesheet">
+
+
+  <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
   <script src="components/header.js" type="text/javascript" defer></script>
   <script src="components/footer.js" type="text/javascript" defer></script>
 
@@ -37,40 +44,31 @@
     </div>
     <div>
       <p>We wonder how much people know about the movements they make.
-        For example, how accurately can we describe the fine details of an arm movement?
-        We use behavioural methods to quantify this metacognitive ability and (f)MRI and EEG to understand the brain
-        mechanisms underlying it.<br>
+        For example, how accurately can we describe the fine details of an arm movement? And can we monitor all aspects of our 
+        movements equally? 
+        We use behavioural methods to quantify this metacognitive ability<br>
         We collaborate with <a href="http://www.uni-giessen.de/fbz/fb06/sport/arbe/trawis/mitarb/mueller">Hermann
-          Müller</a> and <a href="http://www.uni-giessen.de/fbz/fb06/sport/arbe/trawis/mitarb/maurer_lisa">Lisa
-          Maurer</a> for this project.
+          Müller</a>, <a href="http://www.uni-giessen.de/fbz/fb06/sport/arbe/trawis/mitarb/maurer_lisa">Lisa
+          Maurer</a>, and <a href="http://www.uni-giessen.de/fbz/fb06/sport/arbe/trawis/mitarb/maurer">Heiko
+            Maurer</a> for this project.
       </p>
       <br>
 
-      <p><b>Publications</b></p>
-
-      <p><a href="profile_PolinaArbuzova.html">Polina's</a> first <a
-          href="https://doi.org/10.1101/2020.05.14.092189">pre-print</a> from this project is out,
-        examining people's metacognitive access to very low-level, proximal paremeters of movement (the angle of their
-        arm when they threw a ball) vs. a bit more distal paremeters (the velocity of their arm) of the same movements.
+      <p>We found, for example, that not all tasks are the same: A single person might be better able to monitor some aspects of their 
+      movements better than others. Further, it seems like the ability to monitor the proximal, but not distal, aspects of our movements, is 
+      related to our ability to move well. <br>
       </p>
 
-      <p><b>Conference Posters</b></p>
 
-      <p>Arbuzova, P., Peters, C., Röd, L., Koß, C., Forster, C., Filevich, E. (2019) Measuring Motor Metacognition.
-        <i>9th Mind, Brain, Body Symposium, MindBrainBody Institute</i>. <a
-          href="pdfs/Arbuzova_MBB_poster_Skittles_PDF.pdf">[Poster]</a>
-      </p>
-
-      <p>Peters, C., Filevich, E. (2019) Metacognition of motor control – do we have conscious access to the details of
-        our movements? <i>ASSC 23, London, Ontario</i>. <a href="pdfs/Peters_Poster_ASSC.pdf">[Poster]</a></p>
-
-      <p>Arbuzova, P.*, Filevich, E. (2019) The relationship between visual and motor metacognition depends on the
-        demands of the first-order task. <i>ASSC 23, London, Ontario</i>. <a
-          href="pdfs/ASSC23_Arbuzova_fixed_web.pdf">[Poster]</a></p>
+      <div id="papers_skittles">
+        <ul class="list"></ul>
+      </div>
 
 
-
-      </p>
+     <!--  <div id="posters">
+        <ul class="list"></ul>
+      </div>
+   -->
 
     </div>
 
@@ -94,5 +92,63 @@
  </body>
 </head>
 
+<script>
+  var options = {
+    valueNames: [
+      'title',
+      'year',
+      'authors',
+      'journal',
+      { data: ['id'] },
+      { attr: 'href', name: 'link_journal' },
+      { attr: 'href', name: 'link_pdf' },
+    ],
+    item: `<li>
+            <p class="title"> </p>
+            <p class="authors"> </p>
+            <p class="year"> </p>
+            <p class="journal"> </p>
+            <a class="link_journal" href> Article link </a><br>
+            <a class="link_pdf" href> PDF </a>
+            </li>`
+  };
+
+  var optionsPosters = {
+    valueNames: [
+      'title',
+      'year',
+      'authors',
+      'journal',
+      { data: ['id'] },
+      { attr: 'href', name: 'link_journal' },
+      { attr: 'href', name: 'link_pdf' },
+      { attr: 'href', name: 'link_supplement' },
+      { attr: 'href', name: 'link_preregistration' }
+    ],
+    item: `<li>
+          <p class="title"> </p>
+          <p class="authors"> </p>
+          <p class="year"> </p>
+          <p class="journal"> </p>
+          <a class="link_journal" href> PDF </a>
+          </li>`
+  };
+
+  var paperList = new List('papers_skittles', options);
+  for (let p = 0; p < allArticles.length; p++) {
+    if (allArticles[p].authors.includes("Maurer")) {
+      paperList.add(allArticles[p]);
+    }
+  }
+
+  var posterList = new List('posters', optionsPosters);
+  for (let p = 0; p < allPosters.length; p++) {
+    if (allPosters[p].authors.includes("Arbuzova")) {
+      posterList.add(allPosters[p]);
+    }
+  }
+
+ 
+</script>
 
 </html>
