@@ -21,6 +21,12 @@
   <link href="assets/css/main.css" rel="stylesheet">
 
   <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+  <script type='text/javascript' src='allArticles.js'></script>
+  <script type='text/javascript' src='assets/js/list.min.js'></script>
+  <link href="assets/css/list.css" rel="stylesheet">
+
+  
+  <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
   <script src="components/header.js" type="text/javascript" defer></script>
   <script src="components/footer.js" type="text/javascript" defer></script>
 
@@ -31,30 +37,29 @@
   <div class="container pt">
     <div class="row mt">
       <div class="col-lg-6 col-lg-offset-3 centered">
-        <h3>Metacognition and agency</h3>
+        <h3>Motor metacognition and agency</h3>
         <hr>
       </div>
     </div>
     <div>
-      <p>Agency has often been assumed to be metacognitive. <br>
-        We are trying to unpack this assumption: What do we mean, exactly, when we say that agency is metacognitive? Are
+      <p>Agency has often been assumed to be metacognitive. We are trying to unpack this assumption: What do we mean, exactly, when we say that agency is metacognitive? Are
         our assumptions valid? <br>
-        We use behavioural methods to compare agency and motor metacognition.<br>
-        We collaborate with <a href="https://www.salomonlab.org/">Roy Salomon</a> and his team for this project.
+        We collect behavioural data and test computational models to compare agency and motor metacognition.<br>
+        <br>  
+        In our first paper, we show that the computations underlying agency judgments differ conceptually from 
+        those underlying confidence judgments. We think that this is a good reason to be careful with names, and use one term 
+        for computationally unambiguous processes. See also a <a href="https://twitter.com/marika_constant/status/1388252560876838921">twitter thread</a> for a
+        quick summary.<br>
+        <br>
+        We collaborated with <a href="https://www.salomonlab.org/">Roy Salomon</a> and his team for this project.
       </p>
       <br>
+      
+      <div id="papers_agency">
+        <!-- <input class="search" placeholder="Search" /> -->
+        <ul class="list"></ul>
+      </div>
 
-      <p><b>Publications</b></p>
-
-      <p><a href="profile_MarikaConstant.html">Marika's</a> first <a
-          href="https://www.biorxiv.org/content/10.1101/2021.04.28.441761v1">pre-print</a> from this project is out,
-        suggesting that it may not be legitimate to say that agency judgments are metacognitive in the same way that
-        confidence is.
-
-        See also a <a href="https://twitter.com/marika_constant/status/1388252560876838921">twitter thread</a> for a
-        quick summary.
-
-      </p>
 
     </div>
 
@@ -78,4 +83,35 @@
  </body>
 </head>
 
+
+<script>
+  var options = {
+    valueNames: [
+      'title',
+      'year',
+      'authors',
+      'journal',
+      { data: ['id'] },
+      { attr: 'href', name: 'link_journal' },
+      { attr: 'href', name: 'link_pdf' },
+    ],
+    item: `<li>
+            <p class="title"> </p>
+            <p class="authors"> </p>
+            <p class="year"> </p>
+            <p class="journal"> </p>
+            <a class="link_journal" href> Article link </a><br>
+            <a class="link_pdf" href> PDF </a>
+            </li>`
+  };
+
+  var paperList = new List('papers_agency', options);
+  for (let p = 0; p < allArticles.length; p++) {
+    if (allArticles[p].title.includes("Judgments of agency")) {
+      paperList.add(allArticles[p]);
+    }
+  }
+
+ 
+</script>
 </html>
