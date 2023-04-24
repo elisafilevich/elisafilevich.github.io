@@ -21,6 +21,12 @@
   <link href="assets/css/main.css" rel="stylesheet">
 
   <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+  <script type='text/javascript' src='allArticles.js'></script>
+  <script type='text/javascript' src='assets/js/list.min.js'></script>
+  <link href="assets/css/list.css" rel="stylesheet">
+
+
+  <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
 
 
   <!-- <script src="//cdnjs.cloudflare.com/ajax/libs/list.js/1.5.0/list.min.js"></script> -->
@@ -45,28 +51,30 @@
         <br>
         We wrote a toolbox
         <a href="http://www.jatos.org">(JATOS: Just Another Tool for Online Studies)</a> that manages a server to run
-        studies online. The toolbox is still under active development, so please check it out!</p>
+        studies online. The toolbox is still under active development, so please check it out!<br>
+      </p>
+
+      <div id="papers_jatos">
+        <!-- <input class="search" placeholder="Search" /> -->
+        <ul class="list"></ul>
+      </div>
     </div>
+    <br>
+    <br>
+    <p>Here's a talk (and the relevant bit of the abstract) about JATOS that was part of the <a href="https://san2020.saneurociencias.org.ar/symposia_san/open-neuroscience-new-approaches-for-new-tools/">SAN
+                  Symposium on Open Neuroscience: new approaches for new tools</a></p>
 
 
 
-      <p>Here's a talk (and the relevant bit of the abstract) about JATOS that was part of the <b><a href="https://san2020.saneurociencias.org.ar/symposia_san/open-neuroscience-new-approaches-for-new-tools/">SAN
-                  Symposium on Open Neuroscience: new approaches for new tools</a></b></p>
-
-
-
-      <p><b>"Just Another Tool for Online Studies": An open-source tool to conduct cognitive science
-              experiments
-              online.</b><br>
+      <p><b>"Just Another Tool for Online Studies": An open-source tool to conduct cognitive science experiments
+              online.</b>
+              <br>
          [...]
           JATOS supports online studies, including longitudinal and group studies. I will
           describe the requirements to run a study online, and describe the most common tools available to
-          build
-          and
-          run studies online. I will also give an overview of the advantages and (more importantly),
-          limitations
-          of
-          collecting data online. <br><br>
+          build and run studies online. I will also give an overview of the advantages and (more importantly),
+          limitations of collecting data online. <br>
+          <br>
           <iframe width="560" height="315" src="https://www.youtube.com/embed/J1ELazppklQ"
               title="YouTube video player" frameborder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -93,5 +101,37 @@
    <script src="assets/js/bootstrap.min.js"></script>
  </body>
 </head>
+
+<script>
+  var options = {
+    valueNames: [
+      'title',
+      'year',
+      'authors',
+      'journal',
+      { data: ['id'] },
+      { attr: 'href', name: 'link_journal' },
+      { attr: 'href', name: 'link_pdf' },
+    ],
+    item: `<li>
+            <p class="title"> </p>
+            <p class="authors"> </p>
+            <p class="year"> </p>
+            <p class="journal"> </p>
+            <a class="link_journal" href> Article link </a><br>
+            <a class="link_pdf" href> PDF </a>
+            </li>`
+  };
+
+  var paperList = new List('papers_jatos', options);
+  for (let p = 0; p < allArticles.length; p++) {
+    if (allArticles[p].title.includes("Just another")) {
+      paperList.add(allArticles[p]);
+    }
+  }
+
+ 
+</script>
+
 
 </html>
