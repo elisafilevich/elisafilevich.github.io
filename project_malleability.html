@@ -41,47 +41,26 @@
   <div class="container pt">
     <div class="row mt">
       <div class="col-lg-6 col-lg-offset-3 centered">
-        <h3>Run studies online</h3>
+        <h3>Malleability of confidence</h3>
         <hr>
       </div>
     </div>
     <div>
-      <p>I'm a big enthusiast of collecting online the data that can be collected online. It allows us to gather data
-        quicker, from larger and more diverse populations than those you can access in the lab. <br>
+      <p>Can we improve our metacognitve skills? We probably can. How? That's more difficult to answer!<br>
+        We found that increasing metacognitive sensitivity is pretty difficult, but are actively working on finding 
+        interventions to increase these metacognitive training effects. <br> 
         <br>
-        We built a toolbox
-        <a href="http://www.jatos.org">(JATOS: Just Another Tool for Online Studies)</a> that manages a server to run
-        studies online. The toolbox is still under active development, so please check it out!<br>
-      </p>
+        We collaborate with <a href="https://nfaivre.netlify.com/"> Nathan Faivre</a> and <a href="https://elienbellon.wixsite.com/elienbellon"> Ellien Bellon</a>
+    on this project.</p>
 
-      <div id="papers_jatos">
+      <div id="papers">
         <!-- <input class="search" placeholder="Search" /> -->
         <ul class="list"></ul>
       </div>
     </div>
     <br>
     <br>
-    <p>Here's a talk (and the relevant bit of the abstract) about JATOS that was part of the <a href="https://san2020.saneurociencias.org.ar/symposia_san/open-neuroscience-new-approaches-for-new-tools/">SAN
-                  Symposium on Open Neuroscience: new approaches for new tools</a></p>
-
-
-
-      <p><b>"Just Another Tool for Online Studies": An open-source tool to conduct cognitive science experiments
-              online.</b>
-              <br>
-         [...]
-          JATOS supports online studies, including longitudinal and group studies. I will
-          describe the requirements to run a study online, and describe the most common tools available to
-          build and run studies online. I will also give an overview of the advantages and (more importantly),
-          limitations of collecting data online. <br>
-          <br>
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/J1ELazppklQ"
-              title="YouTube video player" frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen></iframe>
-
-      </p>
-
+    
 
     <!-- <div class="row mt centered">	
   			<div class="col-lg-8 col-lg-offset-2">
@@ -123,9 +102,9 @@
             </li>`
   };
 
-  var paperList = new List('papers_jatos', options);
+  var paperList = new List('papers', options);
   for (let p = 0; p < allArticles.length; p++) {
-    if (allArticles[p].title.includes("Just another")) {
+    if (allArticles[p].title.includes("Disentangling")) {
       paperList.add(allArticles[p]);
     }
   }
