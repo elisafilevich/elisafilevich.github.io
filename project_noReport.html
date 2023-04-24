@@ -21,6 +21,10 @@
   <link href="assets/css/main.css" rel="stylesheet">
 
   <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+  <script type='text/javascript' src='allArticles.js'></script>
+  <script type='text/javascript' src='assets/js/list.min.js'></script>
+  <link href="assets/css/list.css" rel="stylesheet">
+
   <script src="components/header.js" type="text/javascript" defer></script>
   <script src="components/footer.js" type="text/javascript" defer></script>
 
@@ -31,32 +35,65 @@
   <div class="container pt">
     <div class="row mt">
       <div class="col-lg-6 col-lg-offset-3 centered">
-        <h3>Motor effects on confidence judgements</h3>
+        <h3>Information integration for confidence judgments</h3>
         <hr>
       </div>
     </div>
     <div>
+
+      <p> Confidence judgments can, and do, integrate multiple sources of information. As many others in the field, we wonder:
+        How are confidence judgments formed? What do they represent? Which sources of information do they integrate? 
+        How does this integration happen? 
+        <br><br>
+      We often work on these projects together with <a href="https://nfaivre.netlify.com/"> Nathan Faivre</a> and 
+      <a href="https://mpereira.netlify.app/"> Michael Pereira</a>.
+    </p>
+    <br>
+      <h3>How does prior information contribute to confidence?</h3>
+      <p>
+        Bayesian models tell us that decisions result from the integration of priors and likelihoods. 
+        But, do we take prior information into account when judging confidence? Do we weight them equally for 
+        confidence as we do for decisions? 
+        <br><br>
+        As we describe in <a href="https://twitter.com/marika_constant/status/1585937084107264000?ref_src=twsrc%5Etfw%7Ctwcamp%5Eembeddedtimeline%7Ctwterm%5Escreen-name%3Ametamotorlab%7Ctwcon%5Es1"> this tweeprint</a> 
+        and the paper below, we found that priors are in general suboptimally weighted and that, perhaps surprisingly, 
+        this is more strongly the case in discrimination decisions than in the confidence ratings that follow them. 
+        It's as if after we make decisions, we reeevaluate the information that was available from priors, and adjust confidence accordingly.  
+      </p>
+      <div id="papers_priors">
+        <!-- <input class="search" placeholder="Search" /> -->
+        <ul class="list"></ul>
+      </div>
+      <br>
+      <h3>Motor effects on confidence judgements</h3>
       <p>Confidence ratings often correlate (negatively) with reaction times. This, intuitively, makes sense: we're
         probably more sure when we respond quickly,
         and less sure when we have to think about an answer. We asked whether this is just a correlational effect or a
         causal one.
-        <br><br>
+        <br>
         As far as our results show, it's just a correlational effect: when we used a "no-report" paradigm to remove, and
         bypass, first-order responses,
         there were no changes in either confidence or metacognitive sensitivity.
-        <br><br>
-        We work on this project together with <a href="https://nfaivre.netlify.com/"> Nathan Faivre</a>.
       </p>
-      <br><br>
-      <p><b>Publications</b></p>
-      <p> Filevich, E., Koss, C. Faivre, N. (2020). Response-related signals increase confidence but not
-        metacognitive performance. eNeuro 0326-19.2020 <a
-          href="https://www.eneuro.org/content/7/3/ENEURO.0326-19.2020">[Open Access Link]</a>
-        <a href="https://doi.org/10.1101/735712">[BioRxiv]</a>
+      <div id="papers_noreport">
+        <!-- <input class="search" placeholder="Search" /> -->
+        <ul class="list"></ul>
+      </div>
+      <h3>Confidence on multisensory stimuli</h3>
+      <p>Confidence ratings often correlate (negatively) with reaction times. This, intuitively, makes sense: we're
+        probably more sure when we respond quickly,
+        and less sure when we have to think about an answer. We asked whether this is just a correlational effect or a
+        causal one.
+        <br>
+        As far as our results show, it's just a correlational effect: when we used a "no-report" paradigm to remove, and
+        bypass, first-order responses,
+        there were no changes in either confidence or metacognitive sensitivity.
       </p>
-
+      <div id="papers_multisensory">
+        <!-- <input class="search" placeholder="Search" /> -->
+        <ul class="list"></ul>
+      </div>
     </div>
-
 
     <!-- <div class="row mt centered">	
   			<div class="col-lg-8 col-lg-offset-2">
@@ -77,5 +114,49 @@
  </body>
 </head>
 
+
+<script>
+  var options = {
+    valueNames: [
+      'title',
+      'year',
+      'authors',
+      'journal',
+      { data: ['id'] },
+      { attr: 'href', name: 'link_journal' },
+      { attr: 'href', name: 'link_pdf' },
+    ],
+    item: `<li>
+            <p class="title"> </p>
+            <p class="authors"> </p>
+            <p class="year"> </p>
+            <p class="journal"> </p>
+            <a class="link_journal" href> Article link </a><br>
+            <a class="link_pdf" href> PDF </a>
+            </li>`
+  };
+
+    var paperList = new List('papers_priors', options);
+  for (let p = 0; p < allArticles.length; p++) {
+    if (allArticles[p].title.includes("Prior")) {
+      paperList.add(allArticles[p]);
+    }
+  }
+
+  var paperList = new List('papers_noreport', options);
+  for (let p = 0; p < allArticles.length; p++) {
+    if (allArticles[p].title.includes("Response-related signals")) {
+      paperList.add(allArticles[p]);
+    }
+  }
+
+  var paperList = new List('papers_multisensory', options);
+  for (let p = 0; p < allArticles.length; p++) {
+    if (allArticles[p].title.includes("Behavioural, modeling")) {
+      paperList.add(allArticles[p]);
+    }
+  }
+
+</script>
 
 </html>
