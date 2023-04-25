@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <link rel="shortcut icon" href="assets/ico/favicon.ico">
+
+  <title>MetaMotor - Lab </title>
+
+  <!-- We dont need this here but this messes up with the header's format so I'll add it everywhere -->
+  <link href="assets/css/list.css" rel="stylesheet">
+
+  <!-- Bootstrap core CSS -->
+  <link href="assets/css/bootstrap.css" rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+  <link href="assets/css/main.css" rel="stylesheet">
+
+  <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+  <script type='text/javascript' src='allArticles.js'></script>
+  <script type='text/javascript' src='assets/js/list.min.js'></script>
+  <link href="assets/css/list.css" rel="stylesheet">
+
+  <script src="components/header.js" type="text/javascript" defer></script>
+  <script src="components/footer.js" type="text/javascript" defer></script>
+
+<body>
+  <header-component></header-component>
+
+  <!-- +++++ Projects Section +++++ -->
+  <div class="container pt">
+    <div class="row mt">
+      <div class="col-lg-6 col-lg-offset-3 centered">
+        <h3>The role of metacognitive deficits on clinical conditions</h3>
+        <hr>
+      </div>
+    </div>
+    <div>
+
+      <p> Metacognition is interesting, but is it also important? Might some clinical conditions be explained by metacognitive deficits?<br>
+        The two papers we published so far do not (yet) paint a clear picture. More work is needed to understand what's going on.    
+        <br><br>
+    </p>
+    <br>
+      <h3>Tactile monitoring in adults with Tourette disorder</h3>
+      <p>
+        It had been suggested that some symptoms that people with tic disorders and TD experience might result from a dissociation between sensory processing, measured
+         objectively, and patients’ subjective reports. For example, patients with TD describe their subjective experience as an increased sensitivity to external stimuli, 
+        like cutaneous or olfactory stimuli. But theur objective perception thresholds are indistinguishable from a comparable sample of healthy volunteers.<br>
+        A dissociation between objective response accuracy and subjective reports may manifest as lower metacognitive sensitivity. So, we collaborated with
+         <a href="https://neurologie.charite.de/en/metas/person_detail/person/address_detail/pd_dr_med_christos_ganos/"> Christos Ganos</a> to measure 
+         patients with TD in their ability to metacognitively monitor visual and tactile stimuli. 
+        <br>
+        Perhaps confusingly, and against our hypotheses, we found no evidence for a difference between groups of volunteers. The question on the pathogenesis of TD remains open.
+      </p>
+      <div id="papers_TD">
+        <!-- <input class="search" placeholder="Search" /> -->
+        <ul class="list"></ul>
+      </div>
+      <br>
+      <h3>Motor monitoring in patients with functional movement disorders</h3>
+      <p>Functional motor disorders are another case in which patients' subjective experience dissociates from objective markers. For examples, movements are 
+        experienced as involuntary, but show some characteristics of voluntary movement. So, here as well we reasoned that metacoginitive measures could reveal, 
+        and maybe help us understand, these dissociations between subjective and objective measures. 
+        <br>
+        <a href="https://www.isms.uni-luebeck.de/team/julius-verrel/">Julius Verrel </a> led the project and found that, indeed, matients with FMD had both lower sensitivity
+         in discriminating their movements from slightly altered versions of the same movements, and -once we accounted for this- they had lower metacognitive sensitivity in 
+         the discrimination task.  
+      </p>
+      <div id="papers_FMD">
+        <!-- <input class="search" placeholder="Search" /> -->
+        <ul class="list"></ul>
+      </div>
+     
+    </div>
+
+    <!-- <div class="row mt centered">	
+  			<div class="col-lg-8 col-lg-offset-2">
+  				<p><img class="img-responsive" src="assets/img/projects/skittles.png" alt="Skittles"></p>
+  			</div>
+  		</div> -->
+    <!-- /row -->
+  </div><!-- /container -->
+
+  <!-- +++++ Footer Section +++++ -->
+<footer-component></footer-component>
+
+
+<!-- Bootstrap core JavaScript
+   ================================================== -->
+   <!-- Placed at the end of the document so the pages load faster -->
+   <script src="assets/js/bootstrap.min.js"></script>
+ </body>
+</head>
+
+
+<script>
+  var options = {
+    valueNames: [
+      'title',
+      'year',
+      'authors',
+      'journal',
+      { data: ['id'] },
+      { attr: 'href', name: 'link_journal' },
+      { attr: 'href', name: 'link_pdf' },
+    ],
+    item: `<li>
+            <p class="title"> </p>
+            <p class="authors"> </p>
+            <p class="year"> </p>
+            <p class="journal"> </p>
+            <a class="link_journal" href> Article link </a><br>
+            <a class="link_pdf" href> PDF </a>
+            </li>`
+  };
+
+    var paperList = new List('papers_TD', options);
+  for (let p = 0; p < allArticles.length; p++) {
+    if (allArticles[p].title.includes("Tourette")) {
+      paperList.add(allArticles[p]);
+    }
+  }
+
+  var paperList = new List('papers_FMD', options);
+  for (let p = 0; p < allArticles.length; p++) {
+    if (allArticles[p].title.includes("functional movement")) {
+      paperList.add(allArticles[p]);
+    }
+  }
+
+</script>
+
+</html>
