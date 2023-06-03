@@ -57,7 +57,7 @@ var allPosters = [
         id: 4,
         title: 'Are Agency judgments metacognitive?',
         authors: 'Constant, M., Filevich, E.',
-        journal: ' Mind, Brain, Body Symposium, MindBrainBody Institute',
+        journal: 'Mind, Brain, Body Symposium, MindBrainBody Institute',
         year: '2021',
         link_journal: 'pdfs_posters/Constant_BCCN20.pdf'
     },
