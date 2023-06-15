@@ -1,5 +1,12 @@
 var allPosters = [
-    {
+     {
+        id: 9,
+        title: 'Priors more strongly weighted in confidence than decisions…',
+        authors: 'Constant, M., Pereira, M., Faivre, N., Filevich, E.',
+        journal: 'ASSC 26, Ney York City, USA',
+        year: '2023',
+        link_journal: 'pdfs_posters/Constant_ASSC26.pdf'
+    },{
         id: 9,
         title: 'Metacognition of agency: An EEG study',
         authors: 'Charalampaki, A., Filevich, E.',
