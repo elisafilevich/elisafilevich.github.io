@@ -1,6 +1,13 @@
 var allPosters = [
      {
         id: 9,
+        title: 'The role of tactile information on metacognitive representations of agency',
+        authors: 'Charalampaki, A., Filevich, E.',
+        journal: 'ASSC 26, Ney York City, USA',
+        year: '2023',
+        link_journal: 'pdfs_posters/Charalampaki_ASSC26.pdf'
+    },{
+        id: 9,
         title: 'Priors more strongly weighted in confidence than decisions…',
         authors: 'Constant, M., Pereira, M., Faivre, N., Filevich, E.',
         journal: 'ASSC 26, Ney York City, USA',
