@@ -8,9 +8,9 @@ var allPosters = [
         link_journal: 'pdfs_posters/Charalampaki_ASSC26.pdf'
     },{
         id: 9,
-        title: 'Priors more strongly weighted in confidence than decisions…',
+        title: 'Subjective confidence judgments promote stronger use of prior information than in decisions, even when accounting for differences in processing time',
         authors: 'Constant, M., Pereira, M., Faivre, N., Filevich, E.',
-        journal: 'ASSC 26, Ney York City, USA',
+        journal: 'ASSC 26, Ney York City, USA *Poster prize - 3rd place',
         year: '2023',
         link_journal: 'pdfs_posters/Constant_ASSC26.pdf'
     },{
