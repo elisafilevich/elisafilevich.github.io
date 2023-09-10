@@ -1,5 +1,14 @@
 var allArticles = [
     {
+        id: 29,
+        title: 'Prior information differentially affects discrimination decisions and subjective confidence reports',
+        authors: 'Constant, M., Pereira, M., Faivre, N., & Filevich, E.',
+        year: '2023',
+        journal: 'Nature Communications',
+        link_journal: 'https://www.nature.com/articles/s41467-023-41112-0',
+        link_pdf: 'pdfs_articles/Prior information differentially affects discrimination decisions and subjective confidence reports.pdf'
+    },
+    {
         id: 0,
         title: 'Brain-constrained neural modeling explains fast mapping of words to meaning',
         authors: 'Constant, M., Pulvermüller, F., Tomasello, R.',
@@ -40,15 +49,6 @@ var allArticles = [
         journal: 'Psychon Bull Rev',
         link_journal: 'https://doi.org/10.3758/s13423-022-02201-1',
         link_pdf: 'pdfs_articles/Metacognitive domains are not aligned along a dimension of internal-external information source.pdf'
-    },
-    {
-        id: 29,
-        title: 'Prior information differentially affects discrimination decisions and subjective confidence reports',
-        authors: 'Constant, M., Pereira, M., Faivre, N., & Filevich, E.',
-        year: '2022',
-        journal: 'BioRXiv',
-        link_journal: 'https://www.biorxiv.org/content/10.1101/2022.10.26.513829v1',
-        link_pdf: 'pdfs_articles/Prior information differentially affects discrimination decisions and subjective confidence reports.pdf'
     },
     {
         id: 28,
