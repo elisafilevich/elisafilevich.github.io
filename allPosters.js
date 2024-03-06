@@ -1,5 +1,12 @@
 var allPosters = [
-     {
+    {
+        id: 9,
+        title: 'The role of tactile information on metacognitive representations of agency',
+        authors: 'Charalampaki, A., Ciston, A.B., Filevich, E.',
+        journal: 'Mind, Brain, Body Symposium, MindBrainBody Institute. Berlin',
+        year: '2024',
+        link_journal: 'pdfs_posters/Charalampaki_MBB2024.pdf'
+    },{
         id: 9,
         title: 'The role of tactile information on metacognitive representations of agency',
         authors: 'Charalampaki, A., Filevich, E.',
