@@ -10,10 +10,20 @@ class Footer extends HTMLElement {
       <div class="col-lg-4">
         <h4>Find us</h4>
         <p>
-        Hector Research Institute of Education Sciences and Psychology <br/>
-          University of Tübingen<br/>
-          Europastraße 6 <br/>
-          72072 Tübingen, Germany<br/>
+        <a href="https://uni-tuebingen.de/en/faculties/faculty-of-economics-and-social-sciences/subjects/department-of-social-sciences/education-sciences-and-psychology/institute/">
+        Hector Research Institute of Education Sciences and Psychology
+        </a>
+        <br/>
+        <a href="https://motivationsciencelab.com">
+        Motivation Science Lab
+        </a>
+        <br/>
+          University of Tübingen
+          <br/>
+          Europastraße 6 
+          <br/>
+          72072 Tübingen, Germany
+          <br/>
           +49 (0) 7071 29-75649
         </p>
       </div><!-- /col-lg-4 -->
