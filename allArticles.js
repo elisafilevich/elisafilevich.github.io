@@ -4,7 +4,7 @@ var allArticles = [
         title: 'Contributions of tactile information to the sense of agency and its metacognitive representations',
         authors: 'Charalampaki, A., Ciston, A.B., Filevich, E.',
         year: '2024',
-        journal: 'BioRXiv',
+        journal: 'Journal of Experimental Psychology: General',
         link_journal: 'https://psycnet.apa.org/doiLanding?doi=10.1037%2Fxge0001634',
         link_pdf: 'pdfs_articles/Contributions of tactile information to the sense of agency and its metacognitive representations.pdf'
     },
