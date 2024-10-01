@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <link rel="shortcut icon" href="assets/ico/favicon.ico">
+
+  <title>MetaMotor - Lab </title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="assets/css/bootstrap.css" rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+  <link href="assets/css/main.css" rel="stylesheet">
+  
+  <script type='text/javascript' src='allArticles.js'></script>
+  <script type='text/javascript' src='allPosters.js'></script>
+  <script type='text/javascript' src='assets/js/list.min.js'></script>
+  <link href="assets/css/list.css" rel="stylesheet">
+  <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+  <script src="components/header.js" type="text/javascript" defer></script>
+  <script src="components/footer.js" type="text/javascript" defer></script>
+
+<body>
+  <header-component></header-component>
+
+
+
+  <!-- +++++ Projects Section +++++ -->
+
+  <div class="container pt">
+    <div class="row mt">
+      <div class="col-lg-6 col-lg-offset-3 centered">
+        <h3>DELIAH SEEFLUTH</h3>
+        <hr>
+      </div>
+    </div>
+
+      
+    </p>
+
+
+    <p><b>External Links</b></p>
+
+    
+
+    <p><br><b>Journal Articles</b></p>
+
+    <div id="papers">
+      <input class="search" placeholder="Search" />
+      <ul class="list"></ul>
+    </div>
+
+    <p><br><b>Posters</b></p>
+
+    <div id="posters">
+      <input class="search" placeholder="Search" />
+      <ul class="list"></ul>
+    </div>
+
+
+
+  </div><!-- /container -->
+
+
+  <!-- +++++ Footer Section +++++ -->
+<footer-component></footer-component>
+
+
+<!-- Bootstrap core JavaScript
+   ================================================== -->
+   <!-- Placed at the end of the document so the pages load faster -->
+   <script src="assets/js/bootstrap.min.js"></script>
+ </body>
+</head>
+
+
+<script>
+var options = {
+        valueNames: [
+            'title',
+            'year',
+            'authors',
+            'journal',
+            { data: ['id'] },
+            { attr: 'href', name: 'link_journal' },
+            { attr: 'href', name: 'link_pdf' },
+        ],
+        item: `<li>
+            <p class="title"> </p>
+            <p class="authors"> </p>
+            <p class="year"> </p>
+            <p class="journal"> </p>
+            <a class="link_journal" href> Article link </a><br>
+            <a class="link_pdf" href> PDF </a>
+            </li>`
+    };
+
+  var optionsPosters = {
+    valueNames: [
+      'title',
+      'year',
+      'authors',
+      'journal',
+      { data: ['id'] },
+      { attr: 'href', name: 'link_journal' },
+      { attr: 'href', name: 'link-pdf' },
+      { attr: 'href', name: 'link-supplement' },
+      { attr: 'href', name: 'link-preregistration' }
+    ],
+    item: `<li>
+          <p class="title"> </p>
+          <p class="authors"> </p>
+          <p class="year"> </p>
+          <p class="journal"> </p>
+          <a class="link_journal" href> PDF </a>
+          </li>`
+  };
+
+  var paperList = new List('papers', options);
+  for (let p = 0; p < allArticles.length; p++) {
+    if (allArticles[p].authors.includes("Seefluth")) {
+      paperList.add(allArticles[p]);
+    }
+  }
+
+  var posterList = new List('posters', optionsPosters);
+  for (let p = 0; p < allPosters.length; p++) {
+    if (allPosters[p].authors.includes("Seefluth")) {
+      posterList.add(allPosters[p]);
+    }
+  }
+
+
+</script>
+
+</html>
