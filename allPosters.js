@@ -1,6 +1,14 @@
 var allPosters = [
     {
         id: 9,
+        title: 'Focus of Attention During Musical Performance: The Role of Motor Metacognition and Expertise',
+        authors: 'Villabona Orozco, M.P., Seefluth, D., Ciston, A., Sakaki, M, Filevich, E.',
+        journal: 'TEMMPS – Tübingen week on Education, Motivation, Meta-Cognition, Personality, and Self-regulation',
+        year: '2024',
+        link_journal: 'pdfs_posters/Villabona_TEMMPS2024.pdf'
+    },
+    {
+        id: 9,
         title: 'The role of tactile information on metacognitive representations of agency',
         authors: 'Charalampaki, A., Ciston, A.B., Filevich, E.',
         journal: 'Mind, Brain, Body Symposium, MindBrainBody Institute. Berlin',
