@@ -1,6 +1,15 @@
 var allArticles = [
     {
         id: 0,
+        title: 'Dissociation of movement and outcome representations in metacognition of agency',
+        authors: 'Charalampaki, A., Maurer, H., Maurer, L.K. Muller, H. Filevich, E.',
+        year: '2024',
+        journal: 'BioRXiv',
+        link_journal: 'https://doi.org/10.1101/2024.10.14.618169',
+        link_pdf: 'pdfs_articles/DDissociation of movement and outcome representations in metacognition of agency'
+    },
+    {
+        id: 0,
         title: 'Contributions of tactile information to the sense of agency and its metacognitive representations',
         authors: 'Charalampaki, A., Ciston, A.B., Filevich, E.',
         year: '2024',
@@ -25,7 +34,7 @@ var allArticles = [
         journal: 'Cerebral Cortex',
         link_journal: 'https://doi.org/10.1093/cercor/bhad007',
         link_pdf: 'pdfs_articles/Brain-constrained neural modeling explains fast mapping of words to meaning.pdf'
-    },{
+    }, {
         id: 0,
         title: 'Exogenous and endogenous sources of uncertainty inform global performance monitoring',
         authors: 'Chancel, M., Filevich, E., Faivre, N.',
@@ -33,7 +42,7 @@ var allArticles = [
         journal: 'PsyArXiv',
         link_journal: 'https://psyarxiv.com/gbjy5/',
         link_pdf: 'pdfs_articles/Exogenous and endogenous sources of uncertainty inform global performance monitoring.pdf'
-    },{
+    }, {
         id: 26,
         title: 'Motor outcomes congruent with intentions may sharpen metacognitive representations',
         authors: 'Charalampaki, A., Peters, C., Maurer, H., Maurer, LK., Müller, H., Verrel, J., Filevich, E.',
@@ -41,9 +50,9 @@ var allArticles = [
         journal: 'Cognition',
         link_journal: 'https://www.sciencedirect.com/science/article/pii/S0010027723000227',
         link_pdf: 'pdfs_articles/Motor outcomes congruent with intentions may sharpen metacognitive representations.pdf'
-    }, 
+    },
     {
-        id:31,
+        id: 31,
         title: 'Impaired metacognition of voluntary movement in functional movement disorder',
         authors: 'Verrel, J., Chwolka, F., Filevich, E., Moyé, J., Paulus T., Zittel S., Bäumer T., Münchau A., Weissbach A.',
         year: '2023',
@@ -51,7 +60,8 @@ var allArticles = [
         link_journal: 'https://movementdisorders.onlinelibrary.wiley.com/doi/10.1002/mds.29303',
         link_pdf: 'pdfs_articles/Impaired Metacognition of Voluntary Movement in Functional Movement Disorder.pdf'
     },
-    {id:30,
+    {
+        id: 30,
         title: 'Metacognitive domains are not aligned along a dimension of internal-external information source',
         authors: 'Arbuzova, P., Maurer, L.K. & Filevich, E.',
         year: '2022',
