@@ -62,7 +62,28 @@
 
 
     </div>
+    <br><br><br>
 
+    <div>
+      <p>In another line of research, we generally asked questions about agency using metacognitive methods. We reasoned that measuring the precision of <i>metacognition of agency</i> 
+        in different conditions would allow us to compare them in a way that explicit agency ratings does not, because they are subject to response biases.<br>
+        In three studies using this approach, Angeliki Charalampaki found, first, that we more confidently attribute actions to ourselves when they had the outcome that we intended them to have. 
+        She also suggests that the mechanisms that the brain uses to attribute agency over action outcomes may not be the same as those we use to attribute agency over the actions themselves. 
+        And, finally, she found a way to manipulate not just the the visual sensory consequences of an action (as most studies do) but also the _tactile_ consequences of an action, 
+        and measured participants' agency judgments and metacognition, compared to more traditional manipulations.<br>
+        <br>  
+        Along the way, we found that measuring metacognition of agency can, indeed, help in comparing conditions directly. But also that it comes with all sorts of problems!<br>
+        <br>
+      </p>
+      <br>
+      
+      <div id="papers_agency_angeliki">
+        <!-- <input class="search" placeholder="Search" /> -->
+        <ul class="list"></ul>
+      </div>
+
+
+    </div>
 
     <!-- <div class="row mt centered">	
   			<div class="col-lg-8 col-lg-offset-2">
@@ -112,6 +133,13 @@
     }
   }
 
+
+  var paperList = new List('papers_agency_angeliki', options);
+  for (let p = 0; p < allArticles.length; p++) {
+    if (allArticles[p].authors.includes("Charalampaki") & allArticles[p].authors.includes("Filevich")) {
+      paperList.add(allArticles[p]);
+    }
+  }
  
 </script>
 </html>
