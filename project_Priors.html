@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <link rel="shortcut icon" href="assets/ico/favicon.ico">
+
+  <title>MetaMotor - Lab </title>
+
+  <!-- We dont need this here but this messes up with the header's format so I'll add it everywhere -->
+  <link href="assets/css/list.css" rel="stylesheet">
+
+  <!-- Bootstrap core CSS -->
+  <link href="assets/css/bootstrap.css" rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+  <link href="assets/css/main.css" rel="stylesheet">
+
+  <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+  <script type='text/javascript' src='allArticles.js'></script>
+  <script type='text/javascript' src='assets/js/list.min.js'></script>
+  <link href="assets/css/list.css" rel="stylesheet">
+
+  
+  <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+  <script src="components/header.js" type="text/javascript" defer></script>
+  <script src="components/footer.js" type="text/javascript" defer></script>
+
+<body>
+  <header-component></header-component>
+
+  <!-- +++++ Projects Section +++++ -->
+  <div class="container pt">
+    <div class="row mt">
+      <div class="col-lg-6 col-lg-offset-3 centered">
+        <h3>The effects of priors on confidence</h3>
+        <hr>
+      </div>
+    </div>
+    <div>
+      <p>Prior information affects the way we percieve the world, and has been shown to affect perceptual decisions<br>
+        Priors, then, are assumed, and have been shown, to affect confidence. But does a prior on the identity of the stimulus have the same effect on confidence as it does on perceptual decisions? Or are they weigthed differently on the two kids of responses?
+        Characterizing the (potentially) different influences of priors on decisions and confidence will help us understand how confidence is computed.<br>
+        <br>  
+        In two studies, that exploited either high-level and low-level perceptual priors <a href="https://scholar.google.com/citations?user=TjIo3CAAAAAJ&hl=en&oi=ao">Marika Constant</a> 
+        created pairs of conditions that were matched in the posterior precision, but differed in the strength of the prior.
+        She found that priors affect confidence slightly more so than they do perceptual decisions. 
+        <br>
+      </p>
+      <br>
+      
+      <div id="papers_priors">
+        <!-- <input class="search" placeholder="Search" /> -->
+        <ul class="list"></ul>
+      </div>
+
+
+    </div>
+    </div>
+
+    <!-- <div class="row mt centered">	
+  			<div class="col-lg-8 col-lg-offset-2">
+  				<p><img class="img-responsive" src="assets/img/projects/skittles.png" alt="Skittles"></p>
+  			</div>
+  		</div> -->
+    <!-- /row -->
+  </div><!-- /container -->
+
+  <!-- +++++ Footer Section +++++ -->
+<footer-component></footer-component>
+
+
+<!-- Bootstrap core JavaScript
+   ================================================== -->
+   <!-- Placed at the end of the document so the pages load faster -->
+   <script src="assets/js/bootstrap.min.js"></script>
+ </body>
+</head>
+
+
+<script>
+  var options = {
+    valueNames: [
+      'title',
+      'year',
+      'authors',
+      'journal',
+      { data: ['id'] },
+      { attr: 'href', name: 'link_journal' },
+      { attr: 'href', name: 'link_pdf' },
+    ],
+    item: `<li>
+            <p class="title"> </p>
+            <p class="authors"> </p>
+            <p class="year"> </p>
+            <p class="journal"> </p>
+            <a class="link_journal" href> Article link </a><br>
+            <a class="link_pdf" href> PDF </a>
+            </li>`
+  };
+
+  var paperList = new List('papers_priors', options);
+  for (let p = 0; p < allArticles.length; p++) {
+    if (allArticles[p].title.includes("Prior") & allArticles[p].authors.includes("Constant")) {
+      paperList.add(allArticles[p]);
+    }
+  }
+ 
+</script>
+</html>
