@@ -54,11 +54,11 @@
         Bayesian models tell us that decisions result from the integration of priors and likelihoods. 
         But, do we take prior information into account when judging confidence? Do we weight them equally for 
         confidence as we do for decisions? 
-        <br><br>
-        As we describe in <a href="https://twitter.com/marika_constant/status/1585937084107264000?ref_src=twsrc%5Etfw%7Ctwcamp%5Eembeddedtimeline%7Ctwterm%5Escreen-name%3Ametamotorlab%7Ctwcon%5Es1"> this tweeprint</a> 
-        and the paper below, we found that priors are in general suboptimally weighted and that, perhaps surprisingly, 
-        this is more strongly the case in discrimination decisions than in the confidence ratings that follow them. 
-        It's as if after we make decisions, we reeevaluate the information that was available from priors, and adjust confidence accordingly.  
+        <br><br>  
+          In two studies that exploited either high-level and low-level perceptual priors <a href="https://scholar.google.com/citations?user=TjIo3CAAAAAJ&hl=en&oi=ao">Marika Constant</a> 
+          created pairs of conditions that were matched in the posterior precision, but differed in the strength of the prior.
+          She found that priors affect confidence slightly more so than they do perceptual decisions. 
+          <br>
       </p>
       <div id="papers_priors">
         <!-- <input class="search" placeholder="Search" /> -->
@@ -138,7 +138,7 @@
 
     var paperList = new List('papers_priors', options);
   for (let p = 0; p < allArticles.length; p++) {
-    if (allArticles[p].title.includes("Prior")) {
+    if (allArticles[p].title.includes("Prior") & allArticles[p].authors.includes("Constant")) {
       paperList.add(allArticles[p]);
     }
   }
