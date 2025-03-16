@@ -23,6 +23,7 @@ class Header extends HTMLElement {
                     <li><a href="people.html">People</a></li>
                     <li><a href="jobDescription.html">Join us</a></li>
                     <li><a href="funding.html">Funding</a></li>
+                    <li><a href="codeRepos.html">Code</a></li>
                 </ul>
             </div>
         </div>

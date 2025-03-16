@@ -10,33 +10,38 @@
 @import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
 
 body {
-  	background-color: #ffffff;
-  	font-family: 'Montserrat', sans-serif;
-    font-weight: 400;
-    font-size: 14px;
-    color: #555;
+	background-color: #ffffff;
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 400;
+	font-size: 14px;
+	color: #555;
 
-    -webkit-font-smoothing: antialiased;
-    -webkit-overflow-scrolling: touch;
+	-webkit-font-smoothing: antialiased;
+	-webkit-overflow-scrolling: touch;
 }
 
 .pt {
 	position: relative;
 	min-height: 75vh;
-  }
+}
 
-  .abstract {
+.abstract {
 	width: 75%;
 	text-align: justify;
-	text-justify: inter-word;  
-  }
+	text-justify: inter-word;
+}
 
 
 /* Titles */
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
 	font-family: 'Montserrat', sans-serif;
-    font-weight: 700;
-    color: #333;
+	font-weight: 700;
+	color: #333;
 }
 
 h1 {
@@ -49,50 +54,50 @@ h1 {
 
 /* Paragraph & Typographic */
 p {
-    line-height: 28px;
-    margin-bottom: 25px;
-    font-size: 16px;
+	line-height: 28px;
+	margin-bottom: 25px;
+	font-size: 16px;
 }
 
 .centered {
-    text-align: center;
+	text-align: center;
 }
 
 /* Links */
 a {
-    color: #1abc9c;
-    word-wrap: break-word;
+	color: #1abc9c;
+	word-wrap: break-word;
 
-    -webkit-transition: color 0.1s ease-in, background 0.1s ease-in;
-    -moz-transition: color 0.1s ease-in, background 0.1s ease-in;
-    -ms-transition: color 0.1s ease-in, background 0.1s ease-in;
-    -o-transition: color 0.1s ease-in, background 0.1s ease-in;
-    transition: color 0.1s ease-in, background 0.1s ease-in;
+	-webkit-transition: color 0.1s ease-in, background 0.1s ease-in;
+	-moz-transition: color 0.1s ease-in, background 0.1s ease-in;
+	-ms-transition: color 0.1s ease-in, background 0.1s ease-in;
+	-o-transition: color 0.1s ease-in, background 0.1s ease-in;
+	transition: color 0.1s ease-in, background 0.1s ease-in;
 }
 
 a:hover,
 a:focus {
-    color: #7b7b7b;
-    text-decoration: none;
-    outline: 0;
+	color: #7b7b7b;
+	text-decoration: none;
+	outline: 0;
 }
 
 a:before,
 a:after {
-    -webkit-transition: color 0.1s ease-in, background 0.1s ease-in;
-    -moz-transition: color 0.1s ease-in, background 0.1s ease-in;
-    -ms-transition: color 0.1s ease-in, background 0.1s ease-in;
-    -o-transition: color 0.1s ease-in, background 0.1s ease-in;
-    transition: color 0.1s ease-in, background 0.1s ease-in;
+	-webkit-transition: color 0.1s ease-in, background 0.1s ease-in;
+	-moz-transition: color 0.1s ease-in, background 0.1s ease-in;
+	-ms-transition: color 0.1s ease-in, background 0.1s ease-in;
+	-o-transition: color 0.1s ease-in, background 0.1s ease-in;
+	transition: color 0.1s ease-in, background 0.1s ease-in;
 }
 
- hr {
-    display: block;
-    height: 1px;
-    border: 0;
-    border-top: 1px solid #ccc;
-    margin: 1em 0;
-    padding: 0;
+hr {
+	display: block;
+	height: 1px;
+	border: 0;
+	border-top: 1px solid #ccc;
+	margin: 1em 0;
+	padding: 0;
 }
 
 
@@ -111,11 +116,11 @@ a:after {
 	border-color: #16a085;
 }
 
-.navbar-inverse .navbar-nav > li > a {
+.navbar-inverse .navbar-nav>li>a {
 	color: white;
 }
 
-.navbar-inverse .navbar-nav > li > a:hover {
+.navbar-inverse .navbar-nav>li>a:hover {
 	color: #222222;
 }
 
@@ -134,7 +139,7 @@ a:after {
 }
 
 .progress-bar-theme {
-  background-color: #1abc9c;
+	background-color: #1abc9c;
 }
 
 
@@ -222,23 +227,25 @@ bt {
 
 /* ================== PORTFOLIO IMAGES HOVER EFFECT ================== */
 /* Effects also are controled by hover.zoom.js */
-.zoom { 
-    display:block; 
-    position:relative; 
-    overflow:hidden; 
-    background:transparent url(../img/loader.gif) no-repeat center;
+.zoom {
+	display: block;
+	position: relative;
+	overflow: hidden;
+	background: transparent url(../img/loader.gif) no-repeat center;
 }
 
 
-    .zoomOverlay {
-        position:absolute;
-        top:0; left:0;
-        bottom:0; right:0;
-        display:none;
-        background-image:url(../img/zoom.png);
-        background-repeat:no-repeat;
-        background-position:center;
-    }
+.zoomOverlay {
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	display: none;
+	background-image: url(../img/zoom.png);
+	background-repeat: no-repeat;
+	background-position: center;
+}
 
 .zoom2 {
 	opacity: 1;
@@ -254,3 +261,23 @@ bt {
 	font-size: 40px;
 	color: #1abc9c;
 }
+
+.repo-row {
+	display: flex;
+	align-items: center;
+	padding: 10px;
+	margin: 10px 0;
+}
+
+.repo-row img {
+	width: 100px;
+	height: 100px;
+	margin-right: 15px;
+}
+
+.repo-content {
+	display: flex;
+	flex-direction: column;
+}
+
+

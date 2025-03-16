@@ -6,7 +6,8 @@ var allArticles = [
         year: '2024',
         journal: 'BioRXiv',
         link_journal: 'https://doi.org/10.1101/2024.10.14.618169',
-        link_pdf: 'pdfs_articles/Dissociation of movement and outcome representations in metacognition of agency.pdf'
+        link_pdf: 'pdfs_articles/Dissociation of movement and outcome representations in metacognition of agency.pdf',
+        repo: 'https://google.com'
     },
     {
         id: 0,
