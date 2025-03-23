@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="assets/ico/favicon.ico">
+
+
+    <title>MetaMotor - Lab </title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="assets/css/main.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+
+    <!-- For Altmetrics badges 
+    <script type='text/javascript' src='https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js'></script> -->
+
+    <script type='text/javascript' src='allRepos.js'></script>
+    <!-- <script src="//cdnjs.cloudflare.com/ajax/libs/list.js/1.5.0/list.min.js"></script> -->
+    <script type='text/javascript' src='assets/js/list.min.js'></script>
+    <link href="assets/css/list.css" rel="stylesheet">
+    <script src="components/header.js" type="text/javascript" defer></script>
+    <script src="components/footer.js" type="text/javascript" defer></script>
+
+<body>
+    <header-component></header-component>
+
+
+    <div class="container pt">
+        <div class="row mt">
+            <div class="col-lg-6 col-lg-offset-3 centered">
+                <h3>OPEN CODE</h3>
+                <hr>
+                <p>Here are the code and data used on most of our recent projects.<br><br> 
+                We are sometimes slow to update this. <br> Write to us if you are looking for something that is not available, we might just need to dig it out</p>
+            </div>
+        </div>
+
+        <p><br><b>Repositories</b></p>
+
+        <div id="repos">
+            <input class="search" placeholder="Search" />
+            <ul class="list"></ul>
+        </div>
+
+    </div><!-- /container -->
+
+    <!-- +++++ Footer Section +++++ -->
+    <footer-component></footer-component>
+
+
+    <!-- Bootstrap core JavaScript
+   ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="assets/js/bootstrap.min.js"></script>
+</body>
+</head>
+
+
+<script>
+    var options = {
+        valueNames: [
+            'title',
+            'year',
+            'authors',
+            'journal',
+            { data: ['id'] },
+            { attr: 'href', name: 'link_repo' },
+            { attr: 'href', name: 'link_pdf' }
+        ],
+        item: `<li>
+            <p class="title"> </p>
+            <p class="authors"> </p>
+            <p class="year"> </p>
+            <p class="journal"> </p>
+            <a class="link_repo" href> Link to repo </a><br>
+            <a class="link_pdf" href> PDF </a>
+            </li>`
+    };
+
+    var repoList = new List('repos', options);
+    for (let r = 0; r < allRepos.length; r++) {
+        //if (allRepos[r].authors.includes("Filevich")) {
+            repoList.add(allRepos[r]);
+        //}
+    }
+
+
+
+</script>
+
+</html>

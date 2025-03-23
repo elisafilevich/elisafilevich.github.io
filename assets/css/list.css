@@ -106,7 +106,7 @@ input:focus {
     font-size: small;
 }
 
-.link_journal, .link_pdf, .link_supplement, .link_preregistration {
+.link_journal, .link_pdf, .link_supplement, .link_preregistration, .link_repo {
     color: #1abc9c;
     word-wrap: break-word;
     font-weight: normal;
