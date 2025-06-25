@@ -2,6 +2,14 @@ var allArticles = [
     {
         id: 0,
         title: 'Dissociation of movement and outcome representations in metacognition of agency',
+        authors: 'Villabona Orozco, M.P., Schwarz, L.J., Hanßen, A., Kranczioch C.',
+        year: '2025',
+        journal: 'Front. Psychol.',
+        link_journal: 'https://www.frontiersin.org/journals/psychology/articles/10.3389/fpsyg.2025.1598196/full',
+        link_pdf: 'pdfs_articles/Investigating mu and alpha oscillations as indicators of intra-individual success and inter-individual ability in motor imagery performance.pdf',
+    },{
+        id: 0,
+        title: 'Dissociation of movement and outcome representations in metacognition of agency',
         authors: 'Charalampaki, A., Maurer, H., Maurer, L.K. Muller, H. Filevich, E.',
         year: '2024',
         journal: 'BioRXiv',
