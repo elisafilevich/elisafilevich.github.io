@@ -1,7 +1,7 @@
 var allArticles = [
     {
         id: 0,
-        title: 'Dissociation of movement and outcome representations in metacognition of agency',
+        title: 'Investigating mu and alpha oscillations as indicators of intra-individual success and inter-individual ability in motor imagery performance',
         authors: 'Villabona Orozco, M.P., Schwarz, L.J., Hanßen, A., Kranczioch C.',
         year: '2025',
         journal: 'Front. Psychol.',
