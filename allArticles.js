@@ -1,6 +1,22 @@
 var allArticles = [
     {
         id: 0,
+        title: 'Perceptual and attentional uncertainty impact global performance monitoring',
+        authors: 'Chancel, M., Filevich, E., Faivre, N.',
+        year: '2025',
+        journal: 'Neuroscience of Conciousness',
+        link_journal: 'https://academic.oup.com/nc/article/2025/1/niaf041/8317420',
+        link_pdf: 'pdfs_articles/Perceptual and attentional uncertainty impact global performance monitoring.pdf'
+    },{
+        id: 0,
+        title: 'Testing A Metacognitive Account Of The Attentional Focus Effect In Music Performance',
+        authors: 'Villabona Orozco, M.P., Seefluth, D., Ciston, A., Sakaki, M., Filevich, E.',
+        year: '2025',
+        journal: 'PsyArXiv.',
+        link_journal: 'https://osf.io/preprints/psyarxiv/wsm8t_v1',
+        link_pdf: 'pdfs_articles/Testing A Metacognitive Account Of The Attentional Focus Effect In Music Performance.pdf',
+    },{
+        id: 0,
         title: 'Investigating mu and alpha oscillations as indicators of intra-individual success and inter-individual ability in motor imagery performance',
         authors: 'Villabona Orozco, M.P., Schwarz, L.J., Hanßen, A., Kranczioch C.',
         year: '2025',
@@ -43,14 +59,6 @@ var allArticles = [
         journal: 'Cerebral Cortex',
         link_journal: 'https://doi.org/10.1093/cercor/bhad007',
         link_pdf: 'pdfs_articles/Brain-constrained neural modeling explains fast mapping of words to meaning.pdf'
-    }, {
-        id: 0,
-        title: 'Exogenous and endogenous sources of uncertainty inform global performance monitoring',
-        authors: 'Chancel, M., Filevich, E., Faivre, N.',
-        year: '2023',
-        journal: 'PsyArXiv',
-        link_journal: 'https://psyarxiv.com/gbjy5/',
-        link_pdf: 'pdfs_articles/Exogenous and endogenous sources of uncertainty inform global performance monitoring.pdf'
     }, {
         id: 26,
         title: 'Motor outcomes congruent with intentions may sharpen metacognitive representations',
