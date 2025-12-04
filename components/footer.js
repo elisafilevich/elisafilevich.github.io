@@ -31,6 +31,9 @@ class Footer extends HTMLElement {
       <div class="col-lg-4">
         <h4>Email</h4>
         <p>elisa.filevich@uni-tuebingen.de</p><br/>
+        <h4>Legal</h4>
+        <div><a href="legal_impressum.html">Impressum</a></div>
+        <div><a href="legal_datenschutz.html">Privacy Policy</a></div>
       </div><!-- /col-lg-4 -->
 
       <div class="col-lg-4">
