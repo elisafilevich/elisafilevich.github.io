@@ -1,4 +1,13 @@
 var allArticles = [
+     {
+        id: 0,
+        title: 'Long-term perceptual priors drive confidence bias that favors prior-congruent evidence',
+        authors: 'Constant, M., Mamassian, P., Filevich, E.',
+        year: '2025',
+        journal: 'PLoS Computational Biology',
+        link_journal: '',
+        link_pdf: ''
+    },
     {
         id: 0,
         title: 'Perceptual and attentional uncertainty impact global performance monitoring',
@@ -25,11 +34,11 @@ var allArticles = [
         link_pdf: 'pdfs_articles/Investigating mu and alpha oscillations as indicators of intra-individual success and inter-individual ability in motor imagery performance.pdf',
     },{
         id: 0,
-        title: 'Dissociation of movement and outcome representations in metacognition of agency',
+        title: 'Comparing metacognitive representations of bodily and external agency',
         authors: 'Charalampaki, A., Maurer, H., Maurer, L.K. Muller, H. Filevich, E.',
-        year: '2024',
-        journal: 'BioRXiv',
-        link_journal: 'https://doi.org/10.1101/2024.10.14.618169',
+        year: '2025',
+        journal: 'eNeuro',
+        link_journal: 'https://www.eneuro.org/content/early/2025/12/07/ENEURO.0164-25.2025',
         link_pdf: 'pdfs_articles/Dissociation of movement and outcome representations in metacognition of agency.pdf',
         repo: 'https://google.com'
     },
