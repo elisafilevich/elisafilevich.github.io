@@ -5,7 +5,7 @@ var allArticles = [
         authors: 'Constant, M., Mamassian, P., Filevich, E.',
         year: '2025',
         journal: 'PLoS Computational Biology',
-        link_journal: '',
+        link_journal: 'https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1013826',
         link_pdf: ''
     },
     {
