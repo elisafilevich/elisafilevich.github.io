@@ -6,7 +6,7 @@ var allArticles = [
         year: '2025',
         journal: 'PLoS Computational Biology',
         link_journal: 'https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1013826',
-        link_pdf: ''
+        link_pdf: 'pdfs_articles/Long-term perceptual priors drive confidence bias that favors prior-congruent evidence.pdf'
     },
     {
         id: 0,
@@ -39,7 +39,7 @@ var allArticles = [
         year: '2025',
         journal: 'eNeuro',
         link_journal: 'https://www.eneuro.org/content/early/2025/12/07/ENEURO.0164-25.2025',
-        link_pdf: 'pdfs_articles/Dissociation of movement and outcome representations in metacognition of agency.pdf',
+        link_pdf: 'pdfs_articles/Comparing Metacognitive Representations of Bodily and External Agency.pdf',
         repo: 'https://google.com'
     },
     {
