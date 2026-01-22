@@ -13,7 +13,7 @@ var allArticles = [
         title: 'Perceptual and attentional uncertainty impact global performance monitoring',
         authors: 'Chancel, M., Filevich, E., Faivre, N.',
         year: '2025',
-        journal: 'Neuroscience of Conciousness',
+        journal: 'Neuroscience of Consciousness',
         link_journal: 'https://academic.oup.com/nc/article/2025/1/niaf041/8317420',
         link_pdf: 'pdfs_articles/Perceptual and attentional uncertainty impact global performance monitoring.pdf'
     },{
