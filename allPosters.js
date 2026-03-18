@@ -1,6 +1,21 @@
 var allPosters = [
     {
         id: 9,
+        title: "Every Move I Make: The Relationship Between Metacognition and Motor Performance in Guitar Playing",
+        authors: 'Villabona Orozco, M.P., Sakaki, M, Filevich, E.',
+        journal: "TeaP *Won first-place poster prize",
+        year: 2026, 
+        link_journal: 'pdfs_posters/Villabona_TeaP2026.pdf'
+    },{
+        id: 9,
+        title: "Evaluating the Mind\'s Body: Metacognition of Motor Imagery",
+        authors: 'Filevich, E., Kropp, T., Jana, D., Fusco, A., Hoffmann, K.C., Koss, C.',
+        journal: "TeaP",
+        year: 2026, 
+        link_journal: 'pdfs_posters/Filevich_TEAP26.pdf'
+    },
+    {
+        id: 9,
         title: 'Focus of Attention During Musical Performance: The Role of Motor Metacognition and Expertise',
         authors: 'Villabona Orozco, M.P., Seefluth, D., Ciston, A., Sakaki, M, Filevich, E.',
         journal: 'TEMMPS – Tübingen week on Education, Motivation, Meta-Cognition, Personality, and Self-regulation',
