@@ -152,3 +152,8 @@ footer {
         font-size: 2.2rem;
     }
 }
+
+a {
+  color: rgb(247, 35, 141);
+  font-weight: bold;
+}
